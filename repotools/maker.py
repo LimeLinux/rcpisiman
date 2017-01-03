@@ -100,7 +100,7 @@ timeout  200
 
 label %(title)s
     kernel /pisi/boot/x86_64/kernel
-    append initrd=/pisi/boot/x86_64/initrd.img misobasedir=pisi misolabel=pisilive overlay=free quiet %(exparams)s
+    append initrd=/pisi/boot/x86_64/initrd.img misobasedir=pisi misolabel=limelive overlay=free quiet %(exparams)s
     
 
 label harddisk
@@ -224,7 +224,7 @@ def setup_live_sddm(project):
         lines = []
         for line in open(sddmconf_path, "r").readlines():
             if line.startswith("User"):
-                lines.append("User=pisilive\n")
+                lines.append("User=limelive\n")
             elif line.startswith("Session"):
                 lines.append("Session=plasma.desktop\n") #this code may be have an error
             else:
@@ -241,7 +241,7 @@ def setup_live_lxdm(project):
         lines = []
         for line in open(lxdm_path, "r").readlines():
             if line.startswith("# autologin=dgod"):
-                lines.append("autologin=pisilive\n")
+                lines.append("autologin=limelive\n")
             elif line.startswith("# session=/usr/bin/startlxde"):
                 lines.append("session=/usr/bin/startxfce4\n")    
             else:
@@ -260,7 +260,7 @@ def setup_live_mdm(project):
             if line.startswith("AutomaticLoginEnable=false"):
                 lines.append("AutomaticLoginEnable=true\n")
             elif line.startswith("AutomaticLogin="):
-                lines.append("AutomaticLogin=Pisilive\n")
+                lines.append("AutomaticLogin=limelive\n")
             elif line.startswith("#DefaultSession=default.desktop"):
                 lines.append("DefaultSession=xfce.desktop\n")    
             else:
@@ -277,7 +277,7 @@ def setup_live_lightdm(project):
         lines = []
         for line in open(lightdm_path, "r").readlines():
             if line.startswith("#autologin-user="):
-                lines.append("autologin-user=pisilive\n")
+                lines.append("autologin-user=limelive\n")
             else:
                 lines.append(line)
         open(lightdm_path, "w").write("".join(lines))
@@ -490,7 +490,7 @@ def make_image(project):
 
         obj.setUser(0, "", "", "", "live", "", dbus_interface="tr.org.pardus.comar.User.Manager")
 
-        obj.addUser(1000, "pisilive", "livecd", "/home/pisilive", "/bin/bash", "live", ["wheel", "users", "lp", "lpadmin", "cdrom", "floppy", "disk", "audio", "video", "power", "dialout"], [], [], 
+        obj.addUser(1000, "limelive", "livecd", "/home/limelive", "/bin/bash", "live", ["wheel", "users", "lp", "lpadmin", "cdrom", "floppy", "disk", "audio", "video", "power", "dialout"], [], [], 
             
         dbus_interface="tr.org.pardus.comar.User.Manager")
        
@@ -599,12 +599,12 @@ def install_livecd_util(project):
     run("cp -p %s/live/sudoers/* %s/etc/sudoers.d/." % (configdir,livecd_image_dir),ignore_error=True)
 
     
-    path = os.path.join(livecd_image_dir, "home/pisilive/.config")
+    path = os.path.join(livecd_image_dir, "home/limelive/.config")
     if not os.path.exists(path):
         os.makedirs(path)
         
-    run("cp -p %s/live/kde/.config/* %s/home/pisilive/.config/." % (configdir,livecd_image_dir),ignore_error=True)
-    os.system('/bin/chown 1000:100 "%s/home/pisilive/.config"' % livecd_image_dir)
+    run("cp -p %s/live/kde/.config/* %s/home/limelive/.config/." % (configdir,livecd_image_dir),ignore_error=True)
+    os.system('/bin/chown 1000:100 "%s/home/limelive/.config"' % livecd_image_dir)
     os.chmod(path, 0711)
     
     chroot_comar(livecd_image_dir)
@@ -795,9 +795,9 @@ def make_iso(project):
         setup_isolinux(project)
 
 
-        publisher="Pisi GNU/Linux http://www.pisilinux.org"
-        application="Pisi GNU/Linux Live Media"
-        label="pisiLive"
+        publisher="Lime GNU/Linux http://www.pisilinux.org"
+        application="Lime GNU/Linux Live Media"
+        label="limelive"
 
         
        
