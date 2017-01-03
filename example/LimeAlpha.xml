@@ -25,7 +25,6 @@
         <SelectedPackage>wpa_supplicant</SelectedPackage>
         <SelectedPackage>xfsprogs</SelectedPackage>
         <SelectedPackage>xmlto</SelectedPackage>
-        <SelectedPackage>NetworkManager</SelectedPackage>
         <SelectedPackage>audacious</SelectedPackage>
         <SelectedPackage>audacious-plugins</SelectedPackage>
         <SelectedPackage>bash-completion</SelectedPackage>
@@ -42,6 +41,7 @@
         <SelectedPackage>lightdm</SelectedPackage>
         <SelectedPackage>lightdm-gtk-greeter</SelectedPackage>
         <SelectedPackage>network-manager-applet</SelectedPackage>
+        <SelectedPackage>NetworkManager</SelectedPackage>
         <SelectedPackage>sudo</SelectedPackage>
         <SelectedPackage>xdg-user-dirs</SelectedPackage>
         <SelectedPackage>xdm</SelectedPackage>
