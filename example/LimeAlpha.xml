@@ -1,15 +1,15 @@
 <PisiManProject type="None" compression="xz">
-    <Title>LimeAlpha</Title>
-    <WorkDir>/tmp/openrc</WorkDir>
-    <ConfigFiles>/run/media/erturk/yedekext4/CPISIert/cpisipisiman/config</ConfigFiles>
-    <PackageSelection repo_uri="file:///var/db/buildfarm/packages/0.5/x86_64/pisi-index.xml.xz">
+    <Title>LimeLinux_1.0_Alpha</Title>
+    <WorkDir>/home/erturk/logs</WorkDir>
+    <ConfigFiles>/home/erturk/lime/rcpisiman/config</ConfigFiles>
+    <PackageSelection repo_uri="file:///home/erturk/x86_64/pisi-index.xml.xz">
         <SelectedComponent>system.base</SelectedComponent>
         <SelectedComponent>desktop.mate.base</SelectedComponent>
         <SelectedComponent>x11.driver</SelectedComponent>
         <SelectedComponent>x11.library</SelectedComponent>
         <SelectedComponent>x11.server</SelectedComponent>
         <SelectedPackage>asciidoc</SelectedPackage>
-        <SelectedPackage>gfxtheme-pisilinux-install</SelectedPackage>
+        <SelectedPackage>gfxtheme-limelinux-install</SelectedPackage>
         <SelectedPackage>gnutls</SelectedPackage>
         <SelectedPackage>kernel</SelectedPackage>
         <SelectedPackage>libgudev</SelectedPackage>
@@ -32,7 +32,8 @@
         <SelectedPackage>bashdb</SelectedPackage>
         <SelectedPackage>efibootmgr</SelectedPackage>
         <SelectedPackage>efivar</SelectedPackage>
-        <SelectedPackage>firefox-bin</SelectedPackage>
+        <SelectedPackage>firefox</SelectedPackage>
+        <SelectedPackage>git</SelectedPackage>
         <SelectedPackage>gnome-mplayer</SelectedPackage>
         <SelectedPackage>grub2</SelectedPackage>
         <SelectedPackage>gvfs</SelectedPackage>
@@ -92,7 +93,7 @@
         <Package>gawk</Package>
         <Package>gdbm</Package>
         <Package>gettext</Package>
-        <Package>gfxtheme-pisilinux-install</Package>
+        <Package>gfxtheme-limelinux-install</Package>
         <Package>glib2</Package>
         <Package>glibc</Package>
         <Package>gmp</Package>
@@ -142,6 +143,7 @@
         <Package>libuser</Package>
         <Package>libxcb</Package>
         <Package>libxml2</Package>
+        <Package>limelinux-python</Package>
         <Package>linux-firmware</Package>
         <Package>lsb-release</Package>
         <Package>lvm2</Package>
@@ -180,7 +182,6 @@
         <Package>perl-XML-Simple</Package>
         <Package>piksemel</Package>
         <Package>pisi</Package>
-        <Package>pisilinux-python</Package>
         <Package>plyvel</Package>
         <Package>polkit</Package>
         <Package>popt</Package>
@@ -270,13 +271,14 @@
         <Package>enchant</Package>
         <Package>engrampa</Package>
         <Package>eom</Package>
+        <Package>eudev</Package>
         <Package>exempi</Package>
         <Package>expat</Package>
         <Package>faac</Package>
         <Package>faad2</Package>
         <Package>ffmpeg</Package>
         <Package>fftw3</Package>
-        <Package>firefox-bin</Package>
+        <Package>firefox</Package>
         <Package>flac</Package>
         <Package>flex</Package>
         <Package>fontconfig</Package>
@@ -293,6 +295,7 @@
         <Package>gettext</Package>
         <Package>ghostscript</Package>
         <Package>giflib</Package>
+        <Package>git</Package>
         <Package>gksu</Package>
         <Package>glew</Package>
         <Package>glib-networking</Package>
@@ -339,6 +342,7 @@
         <Package>jbigkit</Package>
         <Package>json-glib</Package>
         <Package>keyutils</Package>
+        <Package>kmod</Package>
         <Package>lame</Package>
         <Package>lcms2</Package>
         <Package>libFS</Package>
@@ -398,6 +402,7 @@
         <Package>libedit</Package>
         <Package>libepoxy</Package>
         <Package>libevdev</Package>
+        <Package>libevent</Package>
         <Package>libexif</Package>
         <Package>libfakekey</Package>
         <Package>libffado</Package>
@@ -454,12 +459,15 @@
         <Package>libtevent</Package>
         <Package>libtheora</Package>
         <Package>libtool</Package>
+        <Package>libtxc-dxtn</Package>
         <Package>libunique</Package>
+        <Package>libunique3</Package>
         <Package>libunistring</Package>
         <Package>libunwind</Package>
         <Package>libusb</Package>
         <Package>libv4l</Package>
         <Package>libva</Package>
+        <Package>libva-intel-driver</Package>
         <Package>libvdpau</Package>
         <Package>libvisual</Package>
         <Package>libvorbis</Package>
@@ -519,6 +527,7 @@
         <Package>opencore-amr</Package>
         <Package>openjpeg</Package>
         <Package>openldap</Package>
+        <Package>openssh</Package>
         <Package>openssl</Package>
         <Package>orbit2</Package>
         <Package>orc</Package>
@@ -530,6 +539,8 @@
         <Package>parted</Package>
         <Package>pcre2</Package>
         <Package>perl</Package>
+        <Package>perl-Error</Package>
+        <Package>perl-Module-Build</Package>
         <Package>perl-XML-Parser</Package>
         <Package>perl-XML-Simple</Package>
         <Package>pixman</Package>
@@ -557,6 +568,7 @@
         <Package>sqlite</Package>
         <Package>startup-notification</Package>
         <Package>sudo</Package>
+        <Package>sysfsutils</Package>
         <Package>t1lib</Package>
         <Package>tcl</Package>
         <Package>tiff</Package>
@@ -565,9 +577,11 @@
         <Package>upower</Package>
         <Package>usbmuxd</Package>
         <Package>util-linux</Package>
+        <Package>vdpau-video</Package>
         <Package>vo-amrwbenc</Package>
         <Package>vte</Package>
         <Package>vte3</Package>
+        <Package>wavpack</Package>
         <Package>wayland</Package>
         <Package>wayland-protocols</Package>
         <Package>webp</Package>
@@ -588,10 +602,16 @@
         <Package>xkeyboard-config</Package>
         <Package>xmlto</Package>
         <Package>xorg-app</Package>
+        <Package>xorg-input-acecad</Package>
+        <Package>xorg-input-elographics</Package>
         <Package>xorg-input-evdev</Package>
+        <Package>xorg-input-joystick</Package>
         <Package>xorg-input-kbd</Package>
+        <Package>xorg-input-libinput</Package>
         <Package>xorg-input-mouse</Package>
         <Package>xorg-input-synaptics</Package>
+        <Package>xorg-input-vmmouse</Package>
+        <Package>xorg-input-void</Package>
         <Package>xorg-input-wacom</Package>
         <Package>xorg-server</Package>
         <Package>xorg-server-common</Package>
@@ -600,10 +620,35 @@
         <Package>xorg-server-xnest</Package>
         <Package>xorg-server-xvfb</Package>
         <Package>xorg-server-xwayland</Package>
+        <Package>xorg-video-apm</Package>
+        <Package>xorg-video-cirrus</Package>
+        <Package>xorg-video-dummy</Package>
         <Package>xorg-video-fbdev</Package>
+        <Package>xorg-video-glint</Package>
+        <Package>xorg-video-i128</Package>
+        <Package>xorg-video-i740</Package>
         <Package>xorg-video-intel</Package>
+        <Package>xorg-video-mach64</Package>
+        <Package>xorg-video-mga</Package>
+        <Package>xorg-video-neomagic</Package>
+        <Package>xorg-video-nouveau</Package>
+        <Package>xorg-video-openchrome</Package>
+        <Package>xorg-video-r128</Package>
         <Package>xorg-video-radeon</Package>
+        <Package>xorg-video-rendition</Package>
+        <Package>xorg-video-s3virge</Package>
+        <Package>xorg-video-savage</Package>
+        <Package>xorg-video-siliconmotion</Package>
+        <Package>xorg-video-sis</Package>
+        <Package>xorg-video-sisusb</Package>
+        <Package>xorg-video-tdfx</Package>
+        <Package>xorg-video-tga</Package>
+        <Package>xorg-video-trident</Package>
+        <Package>xorg-video-v4l</Package>
         <Package>xorg-video-vesa</Package>
+        <Package>xorg-video-vmware</Package>
+        <Package>xorg-video-voodoo</Package>
+        <Package>xvba-video</Package>
         <Package>xvid</Package>
         <Package>xz</Package>
         <Package>zlib</Package>
@@ -700,7 +745,7 @@
     <RootImagePackages>
         <SelectedComponent>system.base</SelectedComponent>
         <SelectedPackage>asciidoc</SelectedPackage>
-        <SelectedPackage>gfxtheme-pisilinux-install</SelectedPackage>
+        <SelectedPackage>gfxtheme-limelinux-install</SelectedPackage>
         <SelectedPackage>gnutls</SelectedPackage>
         <SelectedPackage>kernel</SelectedPackage>
         <SelectedPackage>libgudev</SelectedPackage>
@@ -759,7 +804,7 @@
         <Package>gawk</Package>
         <Package>gdbm</Package>
         <Package>gettext</Package>
-        <Package>gfxtheme-pisilinux-install</Package>
+        <Package>gfxtheme-limelinux-install</Package>
         <Package>glib2</Package>
         <Package>glibc</Package>
         <Package>gmp</Package>
@@ -809,6 +854,7 @@
         <Package>libuser</Package>
         <Package>libxcb</Package>
         <Package>libxml2</Package>
+        <Package>limelinux-python</Package>
         <Package>linux-firmware</Package>
         <Package>lsb-release</Package>
         <Package>lvm2</Package>
@@ -847,7 +893,6 @@
         <Package>perl-XML-Simple</Package>
         <Package>piksemel</Package>
         <Package>pisi</Package>
-        <Package>pisilinux-python</Package>
         <Package>plyvel</Package>
         <Package>polkit</Package>
         <Package>popt</Package>
@@ -902,7 +947,8 @@
         <SelectedPackage>bashdb</SelectedPackage>
         <SelectedPackage>efibootmgr</SelectedPackage>
         <SelectedPackage>efivar</SelectedPackage>
-        <SelectedPackage>firefox-bin</SelectedPackage>
+        <SelectedPackage>firefox</SelectedPackage>
+        <SelectedPackage>git</SelectedPackage>
         <SelectedPackage>gnome-mplayer</SelectedPackage>
         <SelectedPackage>grub2</SelectedPackage>
         <SelectedPackage>gvfs</SelectedPackage>
@@ -964,13 +1010,14 @@
         <Package>enchant</Package>
         <Package>engrampa</Package>
         <Package>eom</Package>
+        <Package>eudev</Package>
         <Package>exempi</Package>
         <Package>expat</Package>
         <Package>faac</Package>
         <Package>faad2</Package>
         <Package>ffmpeg</Package>
         <Package>fftw3</Package>
-        <Package>firefox-bin</Package>
+        <Package>firefox</Package>
         <Package>flac</Package>
         <Package>flex</Package>
         <Package>fontconfig</Package>
@@ -987,6 +1034,7 @@
         <Package>gettext</Package>
         <Package>ghostscript</Package>
         <Package>giflib</Package>
+        <Package>git</Package>
         <Package>gksu</Package>
         <Package>glew</Package>
         <Package>glib-networking</Package>
@@ -1033,6 +1081,7 @@
         <Package>jbigkit</Package>
         <Package>json-glib</Package>
         <Package>keyutils</Package>
+        <Package>kmod</Package>
         <Package>lame</Package>
         <Package>lcms2</Package>
         <Package>libFS</Package>
@@ -1092,6 +1141,7 @@
         <Package>libedit</Package>
         <Package>libepoxy</Package>
         <Package>libevdev</Package>
+        <Package>libevent</Package>
         <Package>libexif</Package>
         <Package>libfakekey</Package>
         <Package>libffado</Package>
@@ -1148,12 +1198,15 @@
         <Package>libtevent</Package>
         <Package>libtheora</Package>
         <Package>libtool</Package>
+        <Package>libtxc-dxtn</Package>
         <Package>libunique</Package>
+        <Package>libunique3</Package>
         <Package>libunistring</Package>
         <Package>libunwind</Package>
         <Package>libusb</Package>
         <Package>libv4l</Package>
         <Package>libva</Package>
+        <Package>libva-intel-driver</Package>
         <Package>libvdpau</Package>
         <Package>libvisual</Package>
         <Package>libvorbis</Package>
@@ -1213,6 +1266,7 @@
         <Package>opencore-amr</Package>
         <Package>openjpeg</Package>
         <Package>openldap</Package>
+        <Package>openssh</Package>
         <Package>openssl</Package>
         <Package>orbit2</Package>
         <Package>orc</Package>
@@ -1224,6 +1278,8 @@
         <Package>parted</Package>
         <Package>pcre2</Package>
         <Package>perl</Package>
+        <Package>perl-Error</Package>
+        <Package>perl-Module-Build</Package>
         <Package>perl-XML-Parser</Package>
         <Package>perl-XML-Simple</Package>
         <Package>pixman</Package>
@@ -1251,6 +1307,7 @@
         <Package>sqlite</Package>
         <Package>startup-notification</Package>
         <Package>sudo</Package>
+        <Package>sysfsutils</Package>
         <Package>t1lib</Package>
         <Package>tcl</Package>
         <Package>tiff</Package>
@@ -1259,9 +1316,11 @@
         <Package>upower</Package>
         <Package>usbmuxd</Package>
         <Package>util-linux</Package>
+        <Package>vdpau-video</Package>
         <Package>vo-amrwbenc</Package>
         <Package>vte</Package>
         <Package>vte3</Package>
+        <Package>wavpack</Package>
         <Package>wayland</Package>
         <Package>wayland-protocols</Package>
         <Package>webp</Package>
@@ -1282,10 +1341,16 @@
         <Package>xkeyboard-config</Package>
         <Package>xmlto</Package>
         <Package>xorg-app</Package>
+        <Package>xorg-input-acecad</Package>
+        <Package>xorg-input-elographics</Package>
         <Package>xorg-input-evdev</Package>
+        <Package>xorg-input-joystick</Package>
         <Package>xorg-input-kbd</Package>
+        <Package>xorg-input-libinput</Package>
         <Package>xorg-input-mouse</Package>
         <Package>xorg-input-synaptics</Package>
+        <Package>xorg-input-vmmouse</Package>
+        <Package>xorg-input-void</Package>
         <Package>xorg-input-wacom</Package>
         <Package>xorg-server</Package>
         <Package>xorg-server-common</Package>
@@ -1294,10 +1359,35 @@
         <Package>xorg-server-xnest</Package>
         <Package>xorg-server-xvfb</Package>
         <Package>xorg-server-xwayland</Package>
+        <Package>xorg-video-apm</Package>
+        <Package>xorg-video-cirrus</Package>
+        <Package>xorg-video-dummy</Package>
         <Package>xorg-video-fbdev</Package>
+        <Package>xorg-video-glint</Package>
+        <Package>xorg-video-i128</Package>
+        <Package>xorg-video-i740</Package>
         <Package>xorg-video-intel</Package>
+        <Package>xorg-video-mach64</Package>
+        <Package>xorg-video-mga</Package>
+        <Package>xorg-video-neomagic</Package>
+        <Package>xorg-video-nouveau</Package>
+        <Package>xorg-video-openchrome</Package>
+        <Package>xorg-video-r128</Package>
         <Package>xorg-video-radeon</Package>
+        <Package>xorg-video-rendition</Package>
+        <Package>xorg-video-s3virge</Package>
+        <Package>xorg-video-savage</Package>
+        <Package>xorg-video-siliconmotion</Package>
+        <Package>xorg-video-sis</Package>
+        <Package>xorg-video-sisusb</Package>
+        <Package>xorg-video-tdfx</Package>
+        <Package>xorg-video-tga</Package>
+        <Package>xorg-video-trident</Package>
+        <Package>xorg-video-v4l</Package>
         <Package>xorg-video-vesa</Package>
+        <Package>xorg-video-vmware</Package>
+        <Package>xorg-video-voodoo</Package>
+        <Package>xvba-video</Package>
         <Package>xvid</Package>
         <Package>xz</Package>
         <Package>zlib</Package>

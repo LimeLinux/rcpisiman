@@ -122,7 +122,7 @@ label hardware
     f.close()
 
     # write gfxboot config for title
-    data = file(os.path.join(image_dir, "usr/share/gfxtheme/pisilinux/install/gfxboot.cfg")).read()
+    data = file(os.path.join(image_dir, "usr/share/gfxtheme/limelinux/install/gfxboot.cfg")).read()
     f = file(os.path.join(iso_dir, "isolinux/gfxboot.cfg"), "w")
     f.write(data % dict)
     f.close()
@@ -181,7 +181,7 @@ def setup_isolinux(project):
             elif name.startswith("initramfs"):
                 copy(os.path.join(path, name), "pisi/boot/x86_64/initrd.img")
 
-    tmplpath = os.path.join(image_dir, "usr/share/gfxtheme/pisilinux/install")
+    tmplpath = os.path.join(image_dir, "usr/share/gfxtheme/limelinux/install")
     dest = os.path.join(iso_dir, "isolinux")
     for name in os.listdir(tmplpath):
         if name != "gfxboot.cfg":
