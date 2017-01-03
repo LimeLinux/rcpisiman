@@ -34,6 +34,7 @@
         <SelectedPackage>firefox</SelectedPackage>
         <SelectedPackage>git</SelectedPackage>
         <SelectedPackage>gnome-mplayer</SelectedPackage>
+        <SelectedPackage>gparted</SelectedPackage>
         <SelectedPackage>grub2</SelectedPackage>
         <SelectedPackage>gvfs</SelectedPackage>
         <SelectedPackage>icon-theme-adwaita</SelectedPackage>
@@ -309,6 +310,7 @@
         <Package>gnuconfig</Package>
         <Package>gnutls</Package>
         <Package>gobject-introspection</Package>
+        <Package>gparted</Package>
         <Package>gpm</Package>
         <Package>graphite2</Package>
         <Package>grub2</Package>
@@ -648,6 +650,7 @@
         <Package>xorg-video-vesa</Package>
         <Package>xorg-video-vmware</Package>
         <Package>xorg-video-voodoo</Package>
+        <Package>xterm</Package>
         <Package>xvba-video</Package>
         <Package>xvid</Package>
         <Package>xz</Package>
@@ -950,6 +953,7 @@
         <SelectedPackage>firefox</SelectedPackage>
         <SelectedPackage>git</SelectedPackage>
         <SelectedPackage>gnome-mplayer</SelectedPackage>
+        <SelectedPackage>gparted</SelectedPackage>
         <SelectedPackage>grub2</SelectedPackage>
         <SelectedPackage>gvfs</SelectedPackage>
         <SelectedPackage>icon-theme-adwaita</SelectedPackage>
@@ -1048,6 +1052,7 @@
         <Package>gnuconfig</Package>
         <Package>gnutls</Package>
         <Package>gobject-introspection</Package>
+        <Package>gparted</Package>
         <Package>gpm</Package>
         <Package>graphite2</Package>
         <Package>grub2</Package>
@@ -1387,6 +1392,7 @@
         <Package>xorg-video-vesa</Package>
         <Package>xorg-video-vmware</Package>
         <Package>xorg-video-voodoo</Package>
+        <Package>xterm</Package>
         <Package>xvba-video</Package>
         <Package>xvid</Package>
         <Package>xz</Package>
