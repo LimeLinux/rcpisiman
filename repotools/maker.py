@@ -795,7 +795,7 @@ def make_iso(project):
         setup_isolinux(project)
 
 
-        publisher="Lime GNU/Linux http://www.pisilinux.org"
+        publisher="Lime GNU/Linux http://www.limelinux.com"
         application="Lime GNU/Linux Live Media"
         label="limelive"
 
