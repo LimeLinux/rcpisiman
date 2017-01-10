@@ -384,14 +384,14 @@ def add_repo(project):
     
     address = open(os.path.join(configdir, "repo.conf")).read()
 
-    run("chroot \"%s\" /usr/bin/pisi ar lime --yes-all  --ignore-check  \"%s\"" % (image_dir,address))
+    run("chroot \"%s\" /usr/bin/pisi ar lime --yes-all  --ignore-check  --no-fetch \"%s\"" % (image_dir,address))
     
     
-    
-    run('umount %s/proc' % image_dir)
-    run('umount %s/sys' % image_dir)
-    run('umount %s/dev' % image_dir)
-    
+    run('/bin/umount %s/dev' % image_dir, ignore_error=True)
+    run('/bin/umount %s/proc' % image_dir, ignore_error=True)
+    run('/bin/umount %s/sys' % image_dir, ignore_error=True)
+    run('/bin/umount -l %s' % image_dir, ignore_error=True)
+     
     run("rm -rf %s/run/dbus/*" % image_dir)
     
 
