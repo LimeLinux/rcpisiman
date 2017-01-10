@@ -1,8 +1,8 @@
 <PisiManProject type="None" compression="xz">
-    <Title>LimeLinux_1.0_Alpha</Title>
-    <WorkDir>/home/erturk/logs</WorkDir>
-    <ConfigFiles>/home/erturk/lime/rcpisiman/config</ConfigFiles>
-    <PackageSelection repo_uri="file:///home/erturk/x86_64/pisi-index.xml.xz">
+    <Title>LimeAlpha</Title>
+    <WorkDir>/home/lime/isos</WorkDir>
+    <ConfigFiles>/home/lime/git/rcpisiman/config</ConfigFiles>
+    <PackageSelection repo_uri="http://package.limelinux.com/1.0-devel/pisi-index.xml.xz">
         <SelectedComponent>system.base</SelectedComponent>
         <SelectedComponent>desktop.mate.base</SelectedComponent>
         <SelectedComponent>x11.driver</SelectedComponent>
@@ -25,15 +25,13 @@
         <SelectedPackage>wpa_supplicant</SelectedPackage>
         <SelectedPackage>xfsprogs</SelectedPackage>
         <SelectedPackage>xmlto</SelectedPackage>
+        <SelectedPackage>NetworkManager</SelectedPackage>
         <SelectedPackage>audacious</SelectedPackage>
         <SelectedPackage>audacious-plugins</SelectedPackage>
         <SelectedPackage>bash-completion</SelectedPackage>
         <SelectedPackage>bashdb</SelectedPackage>
         <SelectedPackage>efibootmgr</SelectedPackage>
         <SelectedPackage>efivar</SelectedPackage>
-        <SelectedPackage>firefox</SelectedPackage>
-        <SelectedPackage>git</SelectedPackage>
-        <SelectedPackage>gnome-mplayer</SelectedPackage>
         <SelectedPackage>gparted</SelectedPackage>
         <SelectedPackage>grub2</SelectedPackage>
         <SelectedPackage>gvfs</SelectedPackage>
@@ -42,7 +40,6 @@
         <SelectedPackage>lightdm</SelectedPackage>
         <SelectedPackage>lightdm-gtk-greeter</SelectedPackage>
         <SelectedPackage>network-manager-applet</SelectedPackage>
-        <SelectedPackage>NetworkManager</SelectedPackage>
         <SelectedPackage>sudo</SelectedPackage>
         <SelectedPackage>xdg-user-dirs</SelectedPackage>
         <SelectedPackage>xdm</SelectedPackage>
@@ -226,7 +223,6 @@
         <Package>zlib</Package>
         <Package>DirectFB</Package>
         <Package>NetworkManager</Package>
-        <Package>a52dec</Package>
         <Package>aalib</Package>
         <Package>acl</Package>
         <Package>alsa-lib</Package>
@@ -275,18 +271,12 @@
         <Package>eudev</Package>
         <Package>exempi</Package>
         <Package>expat</Package>
-        <Package>faac</Package>
-        <Package>faad2</Package>
-        <Package>ffmpeg</Package>
         <Package>fftw3</Package>
-        <Package>firefox</Package>
         <Package>flac</Package>
         <Package>flex</Package>
         <Package>fontconfig</Package>
         <Package>freeglut</Package>
         <Package>freetype</Package>
-        <Package>frei0r-plugins</Package>
-        <Package>fribidi</Package>
         <Package>fuse</Package>
         <Package>gamin</Package>
         <Package>gconf</Package>
@@ -296,16 +286,13 @@
         <Package>gettext</Package>
         <Package>ghostscript</Package>
         <Package>giflib</Package>
-        <Package>git</Package>
         <Package>gksu</Package>
         <Package>glew</Package>
         <Package>glib-networking</Package>
         <Package>glib2</Package>
         <Package>glibmm</Package>
         <Package>gmp</Package>
-        <Package>gmtk</Package>
         <Package>gnome-keyring</Package>
-        <Package>gnome-mplayer</Package>
         <Package>gnome-vfs</Package>
         <Package>gnuconfig</Package>
         <Package>gnutls</Package>
@@ -314,7 +301,6 @@
         <Package>gpm</Package>
         <Package>graphite2</Package>
         <Package>grub2</Package>
-        <Package>gsm</Package>
         <Package>gssdp</Package>
         <Package>gst-plugins-base</Package>
         <Package>gstreamer</Package>
@@ -334,7 +320,6 @@
         <Package>icon-theme-adwaita</Package>
         <Package>icon-theme-hicolor</Package>
         <Package>icu4c</Package>
-        <Package>imlib2</Package>
         <Package>iniparser</Package>
         <Package>iproute2</Package>
         <Package>iptables</Package>
@@ -381,12 +366,9 @@
         <Package>libXxf86vm</Package>
         <Package>libaio</Package>
         <Package>libarchive</Package>
-        <Package>libass</Package>
         <Package>libasyncns</Package>
         <Package>libatasmart</Package>
-        <Package>libbluray</Package>
         <Package>libbsd</Package>
-        <Package>libcaca</Package>
         <Package>libcanberra</Package>
         <Package>libcap</Package>
         <Package>libcap-ng</Package>
@@ -397,14 +379,11 @@
         <Package>libcroco</Package>
         <Package>libcue</Package>
         <Package>libdaemon</Package>
-        <Package>libdc1394</Package>
-        <Package>libdca</Package>
         <Package>libdmx</Package>
         <Package>libdrm</Package>
         <Package>libedit</Package>
         <Package>libepoxy</Package>
         <Package>libevdev</Package>
-        <Package>libevent</Package>
         <Package>libexif</Package>
         <Package>libfakekey</Package>
         <Package>libffado</Package>
@@ -419,25 +398,20 @@
         <Package>libgtop</Package>
         <Package>libgudev</Package>
         <Package>libgxps</Package>
-        <Package>libid3tag</Package>
         <Package>libidn</Package>
         <Package>libiec61883</Package>
         <Package>libimobiledevice</Package>
         <Package>libinput</Package>
         <Package>libjpeg-turbo</Package>
-        <Package>libmad</Package>
         <Package>libmatekbd</Package>
         <Package>libmatemixer</Package>
         <Package>libmateweather</Package>
         <Package>libmodplug</Package>
-        <Package>libmp4v2</Package>
-        <Package>libmpeg2</Package>
         <Package>libmtdev</Package>
         <Package>libndp</Package>
         <Package>libnfnetlink</Package>
         <Package>libnl</Package>
         <Package>libnotify</Package>
-        <Package>libnut</Package>
         <Package>libogg</Package>
         <Package>libomxil-bellagio</Package>
         <Package>libopus</Package>
@@ -467,13 +441,11 @@
         <Package>libunistring</Package>
         <Package>libunwind</Package>
         <Package>libusb</Package>
-        <Package>libv4l</Package>
         <Package>libva</Package>
         <Package>libva-intel-driver</Package>
         <Package>libvdpau</Package>
         <Package>libvisual</Package>
         <Package>libvorbis</Package>
-        <Package>libvpx</Package>
         <Package>libwacom</Package>
         <Package>libwnck2</Package>
         <Package>libwnck3</Package>
@@ -514,7 +486,6 @@
         <Package>mesa-glu</Package>
         <Package>mit-kerberos</Package>
         <Package>mpg123</Package>
-        <Package>mplayer</Package>
         <Package>mtools</Package>
         <Package>ncurses</Package>
         <Package>neon</Package>
@@ -524,12 +495,8 @@
         <Package>nspr</Package>
         <Package>nss</Package>
         <Package>ntfs-3g</Package>
-        <Package>numactl</Package>
-        <Package>openal</Package>
-        <Package>opencore-amr</Package>
         <Package>openjpeg</Package>
         <Package>openldap</Package>
-        <Package>openssh</Package>
         <Package>openssl</Package>
         <Package>orbit2</Package>
         <Package>orc</Package>
@@ -541,12 +508,9 @@
         <Package>parted</Package>
         <Package>pcre2</Package>
         <Package>perl</Package>
-        <Package>perl-Error</Package>
-        <Package>perl-Module-Build</Package>
         <Package>perl-XML-Parser</Package>
         <Package>perl-XML-Simple</Package>
         <Package>pixman</Package>
-        <Package>pkgconfig</Package>
         <Package>pluma</Package>
         <Package>poppler</Package>
         <Package>poppler-data</Package>
@@ -558,11 +522,9 @@
         <Package>python-gtksourceview</Package>
         <Package>python-pygobject</Package>
         <Package>readline</Package>
-        <Package>rtmpdump</Package>
         <Package>run-parts</Package>
         <Package>samba</Package>
         <Package>sbc</Package>
-        <Package>schroedinger</Package>
         <Package>sgml-common</Package>
         <Package>shared-mime-info</Package>
         <Package>slang</Package>
@@ -574,13 +536,11 @@
         <Package>t1lib</Package>
         <Package>tcl</Package>
         <Package>tiff</Package>
-        <Package>twolame</Package>
         <Package>udisks2</Package>
         <Package>upower</Package>
         <Package>usbmuxd</Package>
         <Package>util-linux</Package>
         <Package>vdpau-video</Package>
-        <Package>vo-amrwbenc</Package>
         <Package>vte</Package>
         <Package>vte3</Package>
         <Package>wavpack</Package>
@@ -588,8 +548,6 @@
         <Package>wayland-protocols</Package>
         <Package>webp</Package>
         <Package>wpa_supplicant</Package>
-        <Package>x264</Package>
-        <Package>x265</Package>
         <Package>xcb-util</Package>
         <Package>xcb-util-cursor</Package>
         <Package>xcb-util-image</Package>
@@ -652,7 +610,6 @@
         <Package>xorg-video-voodoo</Package>
         <Package>xterm</Package>
         <Package>xvba-video</Package>
-        <Package>xvid</Package>
         <Package>xz</Package>
         <Package>zlib</Package>
         <Package>atk</Package>
@@ -662,6 +619,8 @@
         <Package>cairo</Package>
         <Package>cli-installer</Package>
         <Package>cups</Package>
+        <Package>dialog</Package>
+        <Package>dmraid</Package>
         <Package>elfutils</Package>
         <Package>expat</Package>
         <Package>fontconfig</Package>
@@ -724,6 +683,7 @@
         <Package>libxshmfence</Package>
         <Package>llvm</Package>
         <Package>llvm-libs</Package>
+        <Package>lvm2</Package>
         <Package>lzo</Package>
         <Package>medit</Package>
         <Package>mesa</Package>
@@ -950,9 +910,6 @@
         <SelectedPackage>bashdb</SelectedPackage>
         <SelectedPackage>efibootmgr</SelectedPackage>
         <SelectedPackage>efivar</SelectedPackage>
-        <SelectedPackage>firefox</SelectedPackage>
-        <SelectedPackage>git</SelectedPackage>
-        <SelectedPackage>gnome-mplayer</SelectedPackage>
         <SelectedPackage>gparted</SelectedPackage>
         <SelectedPackage>grub2</SelectedPackage>
         <SelectedPackage>gvfs</SelectedPackage>
@@ -968,7 +925,6 @@
         <SelectedPackage>xkeyboard-config</SelectedPackage>
         <Package>DirectFB</Package>
         <Package>NetworkManager</Package>
-        <Package>a52dec</Package>
         <Package>aalib</Package>
         <Package>acl</Package>
         <Package>alsa-lib</Package>
@@ -1017,18 +973,12 @@
         <Package>eudev</Package>
         <Package>exempi</Package>
         <Package>expat</Package>
-        <Package>faac</Package>
-        <Package>faad2</Package>
-        <Package>ffmpeg</Package>
         <Package>fftw3</Package>
-        <Package>firefox</Package>
         <Package>flac</Package>
         <Package>flex</Package>
         <Package>fontconfig</Package>
         <Package>freeglut</Package>
         <Package>freetype</Package>
-        <Package>frei0r-plugins</Package>
-        <Package>fribidi</Package>
         <Package>fuse</Package>
         <Package>gamin</Package>
         <Package>gconf</Package>
@@ -1038,16 +988,13 @@
         <Package>gettext</Package>
         <Package>ghostscript</Package>
         <Package>giflib</Package>
-        <Package>git</Package>
         <Package>gksu</Package>
         <Package>glew</Package>
         <Package>glib-networking</Package>
         <Package>glib2</Package>
         <Package>glibmm</Package>
         <Package>gmp</Package>
-        <Package>gmtk</Package>
         <Package>gnome-keyring</Package>
-        <Package>gnome-mplayer</Package>
         <Package>gnome-vfs</Package>
         <Package>gnuconfig</Package>
         <Package>gnutls</Package>
@@ -1056,7 +1003,6 @@
         <Package>gpm</Package>
         <Package>graphite2</Package>
         <Package>grub2</Package>
-        <Package>gsm</Package>
         <Package>gssdp</Package>
         <Package>gst-plugins-base</Package>
         <Package>gstreamer</Package>
@@ -1076,7 +1022,6 @@
         <Package>icon-theme-adwaita</Package>
         <Package>icon-theme-hicolor</Package>
         <Package>icu4c</Package>
-        <Package>imlib2</Package>
         <Package>iniparser</Package>
         <Package>iproute2</Package>
         <Package>iptables</Package>
@@ -1123,12 +1068,9 @@
         <Package>libXxf86vm</Package>
         <Package>libaio</Package>
         <Package>libarchive</Package>
-        <Package>libass</Package>
         <Package>libasyncns</Package>
         <Package>libatasmart</Package>
-        <Package>libbluray</Package>
         <Package>libbsd</Package>
-        <Package>libcaca</Package>
         <Package>libcanberra</Package>
         <Package>libcap</Package>
         <Package>libcap-ng</Package>
@@ -1139,14 +1081,11 @@
         <Package>libcroco</Package>
         <Package>libcue</Package>
         <Package>libdaemon</Package>
-        <Package>libdc1394</Package>
-        <Package>libdca</Package>
         <Package>libdmx</Package>
         <Package>libdrm</Package>
         <Package>libedit</Package>
         <Package>libepoxy</Package>
         <Package>libevdev</Package>
-        <Package>libevent</Package>
         <Package>libexif</Package>
         <Package>libfakekey</Package>
         <Package>libffado</Package>
@@ -1161,25 +1100,20 @@
         <Package>libgtop</Package>
         <Package>libgudev</Package>
         <Package>libgxps</Package>
-        <Package>libid3tag</Package>
         <Package>libidn</Package>
         <Package>libiec61883</Package>
         <Package>libimobiledevice</Package>
         <Package>libinput</Package>
         <Package>libjpeg-turbo</Package>
-        <Package>libmad</Package>
         <Package>libmatekbd</Package>
         <Package>libmatemixer</Package>
         <Package>libmateweather</Package>
         <Package>libmodplug</Package>
-        <Package>libmp4v2</Package>
-        <Package>libmpeg2</Package>
         <Package>libmtdev</Package>
         <Package>libndp</Package>
         <Package>libnfnetlink</Package>
         <Package>libnl</Package>
         <Package>libnotify</Package>
-        <Package>libnut</Package>
         <Package>libogg</Package>
         <Package>libomxil-bellagio</Package>
         <Package>libopus</Package>
@@ -1209,13 +1143,11 @@
         <Package>libunistring</Package>
         <Package>libunwind</Package>
         <Package>libusb</Package>
-        <Package>libv4l</Package>
         <Package>libva</Package>
         <Package>libva-intel-driver</Package>
         <Package>libvdpau</Package>
         <Package>libvisual</Package>
         <Package>libvorbis</Package>
-        <Package>libvpx</Package>
         <Package>libwacom</Package>
         <Package>libwnck2</Package>
         <Package>libwnck3</Package>
@@ -1256,7 +1188,6 @@
         <Package>mesa-glu</Package>
         <Package>mit-kerberos</Package>
         <Package>mpg123</Package>
-        <Package>mplayer</Package>
         <Package>mtools</Package>
         <Package>ncurses</Package>
         <Package>neon</Package>
@@ -1266,12 +1197,8 @@
         <Package>nspr</Package>
         <Package>nss</Package>
         <Package>ntfs-3g</Package>
-        <Package>numactl</Package>
-        <Package>openal</Package>
-        <Package>opencore-amr</Package>
         <Package>openjpeg</Package>
         <Package>openldap</Package>
-        <Package>openssh</Package>
         <Package>openssl</Package>
         <Package>orbit2</Package>
         <Package>orc</Package>
@@ -1283,12 +1210,9 @@
         <Package>parted</Package>
         <Package>pcre2</Package>
         <Package>perl</Package>
-        <Package>perl-Error</Package>
-        <Package>perl-Module-Build</Package>
         <Package>perl-XML-Parser</Package>
         <Package>perl-XML-Simple</Package>
         <Package>pixman</Package>
-        <Package>pkgconfig</Package>
         <Package>pluma</Package>
         <Package>poppler</Package>
         <Package>poppler-data</Package>
@@ -1300,11 +1224,9 @@
         <Package>python-gtksourceview</Package>
         <Package>python-pygobject</Package>
         <Package>readline</Package>
-        <Package>rtmpdump</Package>
         <Package>run-parts</Package>
         <Package>samba</Package>
         <Package>sbc</Package>
-        <Package>schroedinger</Package>
         <Package>sgml-common</Package>
         <Package>shared-mime-info</Package>
         <Package>slang</Package>
@@ -1316,13 +1238,11 @@
         <Package>t1lib</Package>
         <Package>tcl</Package>
         <Package>tiff</Package>
-        <Package>twolame</Package>
         <Package>udisks2</Package>
         <Package>upower</Package>
         <Package>usbmuxd</Package>
         <Package>util-linux</Package>
         <Package>vdpau-video</Package>
-        <Package>vo-amrwbenc</Package>
         <Package>vte</Package>
         <Package>vte3</Package>
         <Package>wavpack</Package>
@@ -1330,8 +1250,6 @@
         <Package>wayland-protocols</Package>
         <Package>webp</Package>
         <Package>wpa_supplicant</Package>
-        <Package>x264</Package>
-        <Package>x265</Package>
         <Package>xcb-util</Package>
         <Package>xcb-util-cursor</Package>
         <Package>xcb-util-image</Package>
@@ -1394,7 +1312,6 @@
         <Package>xorg-video-voodoo</Package>
         <Package>xterm</Package>
         <Package>xvba-video</Package>
-        <Package>xvid</Package>
         <Package>xz</Package>
         <Package>zlib</Package>
     </DesktopImagePackages>
@@ -1409,6 +1326,8 @@
         <Package>cairo</Package>
         <Package>cli-installer</Package>
         <Package>cups</Package>
+        <Package>dialog</Package>
+        <Package>dmraid</Package>
         <Package>elfutils</Package>
         <Package>expat</Package>
         <Package>fontconfig</Package>
@@ -1471,6 +1390,7 @@
         <Package>libxshmfence</Package>
         <Package>llvm</Package>
         <Package>llvm-libs</Package>
+        <Package>lvm2</Package>
         <Package>lzo</Package>
         <Package>medit</Package>
         <Package>mesa</Package>
