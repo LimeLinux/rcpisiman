@@ -390,8 +390,10 @@ def add_repo(project):
     run('/bin/umount %s/dev' % image_dir, ignore_error=True)
     run('/bin/umount %s/proc' % image_dir, ignore_error=True)
     run('/bin/umount %s/sys' % image_dir, ignore_error=True)
+    run('/bin/umount -R %s' % image_dir, ignore_error=True)
     run('/bin/umount -l %s' % image_dir, ignore_error=True)
-     
+
+
     run("rm -rf %s/run/dbus/*" % image_dir)
     
 
