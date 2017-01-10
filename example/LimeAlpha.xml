@@ -1,5 +1,5 @@
 <PisiManProject type="None" compression="xz">
-    <Title>LimeAlpha</Title>
+    <Title>LimeAlphav1</Title>
     <WorkDir>/home/lime/isos</WorkDir>
     <ConfigFiles>/home/lime/git/rcpisiman/config</ConfigFiles>
     <PackageSelection repo_uri="http://package.limelinux.com/1.0-devel/pisi-index.xml.xz">
@@ -21,6 +21,7 @@
         <SelectedPackage>perl-Module-Build</SelectedPackage>
         <SelectedPackage>perl-XML-Simple</SelectedPackage>
         <SelectedPackage>squashfs-tools</SelectedPackage>
+        <SelectedPackage>sudo</SelectedPackage>
         <SelectedPackage>syslinux</SelectedPackage>
         <SelectedPackage>wpa_supplicant</SelectedPackage>
         <SelectedPackage>xfsprogs</SelectedPackage>
@@ -32,6 +33,8 @@
         <SelectedPackage>bashdb</SelectedPackage>
         <SelectedPackage>efibootmgr</SelectedPackage>
         <SelectedPackage>efivar</SelectedPackage>
+        <SelectedPackage>firefox</SelectedPackage>
+        <SelectedPackage>git</SelectedPackage>
         <SelectedPackage>gparted</SelectedPackage>
         <SelectedPackage>grub2</SelectedPackage>
         <SelectedPackage>gvfs</SelectedPackage>
@@ -40,13 +43,11 @@
         <SelectedPackage>lightdm</SelectedPackage>
         <SelectedPackage>lightdm-gtk-greeter</SelectedPackage>
         <SelectedPackage>network-manager-applet</SelectedPackage>
-        <SelectedPackage>sudo</SelectedPackage>
         <SelectedPackage>xdg-user-dirs</SelectedPackage>
         <SelectedPackage>xdm</SelectedPackage>
         <SelectedPackage>xinit</SelectedPackage>
         <SelectedPackage>xkeyboard-config</SelectedPackage>
         <SelectedPackage>cli-installer</SelectedPackage>
-        <SelectedPackage>medit</SelectedPackage>
         <SelectedPackage>xterm</SelectedPackage>
         <Package>ConsoleKit</Package>
         <Package>acl</Package>
@@ -67,6 +68,7 @@
         <Package>cracklib</Package>
         <Package>cryptsetup</Package>
         <Package>curl</Package>
+        <Package>cyrus-sasl</Package>
         <Package>db</Package>
         <Package>dbus</Package>
         <Package>dbus-glib</Package>
@@ -107,6 +109,7 @@
         <Package>json-c</Package>
         <Package>kbd</Package>
         <Package>kernel</Package>
+        <Package>keyutils</Package>
         <Package>kmod</Package>
         <Package>less</Package>
         <Package>leveldb</Package>
@@ -152,6 +155,7 @@
         <Package>memtest86</Package>
         <Package>mingetty</Package>
         <Package>miscfiles</Package>
+        <Package>mit-kerberos</Package>
         <Package>mkinitcpio</Package>
         <Package>mpfr</Package>
         <Package>mtools</Package>
@@ -164,6 +168,7 @@
         <Package>nss</Package>
         <Package>nss-mdns</Package>
         <Package>ntfs-3g</Package>
+        <Package>openldap</Package>
         <Package>openrc</Package>
         <Package>openrc-services</Package>
         <Package>openssl</Package>
@@ -200,6 +205,7 @@
         <Package>spidermonkey</Package>
         <Package>sqlite</Package>
         <Package>squashfs-tools</Package>
+        <Package>sudo</Package>
         <Package>sysfsutils</Package>
         <Package>syslinux</Package>
         <Package>syslog-ng</Package>
@@ -272,6 +278,7 @@
         <Package>exempi</Package>
         <Package>expat</Package>
         <Package>fftw3</Package>
+        <Package>firefox</Package>
         <Package>flac</Package>
         <Package>flex</Package>
         <Package>fontconfig</Package>
@@ -286,6 +293,7 @@
         <Package>gettext</Package>
         <Package>ghostscript</Package>
         <Package>giflib</Package>
+        <Package>git</Package>
         <Package>gksu</Package>
         <Package>glew</Package>
         <Package>glib-networking</Package>
@@ -384,6 +392,7 @@
         <Package>libedit</Package>
         <Package>libepoxy</Package>
         <Package>libevdev</Package>
+        <Package>libevent</Package>
         <Package>libexif</Package>
         <Package>libfakekey</Package>
         <Package>libffado</Package>
@@ -446,6 +455,7 @@
         <Package>libvdpau</Package>
         <Package>libvisual</Package>
         <Package>libvorbis</Package>
+        <Package>libvpx</Package>
         <Package>libwacom</Package>
         <Package>libwnck2</Package>
         <Package>libwnck3</Package>
@@ -497,6 +507,7 @@
         <Package>ntfs-3g</Package>
         <Package>openjpeg</Package>
         <Package>openldap</Package>
+        <Package>openssh</Package>
         <Package>openssl</Package>
         <Package>orbit2</Package>
         <Package>orc</Package>
@@ -508,6 +519,8 @@
         <Package>parted</Package>
         <Package>pcre2</Package>
         <Package>perl</Package>
+        <Package>perl-Error</Package>
+        <Package>perl-Module-Build</Package>
         <Package>perl-XML-Parser</Package>
         <Package>perl-XML-Simple</Package>
         <Package>pixman</Package>
@@ -531,7 +544,6 @@
         <Package>speex</Package>
         <Package>sqlite</Package>
         <Package>startup-notification</Package>
-        <Package>sudo</Package>
         <Package>sysfsutils</Package>
         <Package>t1lib</Package>
         <Package>tcl</Package>
@@ -612,30 +624,11 @@
         <Package>xvba-video</Package>
         <Package>xz</Package>
         <Package>zlib</Package>
-        <Package>atk</Package>
-        <Package>avahi</Package>
         <Package>bzip2</Package>
-        <Package>ca-certificates</Package>
-        <Package>cairo</Package>
-        <Package>cli-installer</Package>
-        <Package>cups</Package>
         <Package>dialog</Package>
         <Package>dmraid</Package>
-        <Package>elfutils</Package>
-        <Package>expat</Package>
         <Package>fontconfig</Package>
-        <Package>freeglut</Package>
         <Package>freetype</Package>
-        <Package>gdbm</Package>
-        <Package>gdk-pixbuf</Package>
-        <Package>glib2</Package>
-        <Package>graphite2</Package>
-        <Package>gtk2</Package>
-        <Package>harfbuzz</Package>
-        <Package>icu4c</Package>
-        <Package>jasper</Package>
-        <Package>jbigkit</Package>
-        <Package>keyutils</Package>
         <Package>libFS</Package>
         <Package>libICE</Package>
         <Package>libSM</Package>
@@ -660,49 +653,20 @@
         <Package>libXt</Package>
         <Package>libXtst</Package>
         <Package>libXv</Package>
-        <Package>libXvMC</Package>
         <Package>libXxf86dga</Package>
         <Package>libXxf86misc</Package>
         <Package>libXxf86miscproto</Package>
         <Package>libXxf86vm</Package>
-        <Package>libdaemon</Package>
         <Package>libdmx</Package>
-        <Package>libdrm</Package>
-        <Package>libedit</Package>
-        <Package>libffi</Package>
         <Package>libfontenc</Package>
-        <Package>libgcc</Package>
-        <Package>libjpeg-turbo</Package>
-        <Package>libpaper</Package>
-        <Package>libpciaccess</Package>
-        <Package>libpcre</Package>
         <Package>libpng</Package>
         <Package>libxcb</Package>
         <Package>libxkbfile</Package>
-        <Package>libxml2</Package>
-        <Package>libxshmfence</Package>
-        <Package>llvm</Package>
-        <Package>llvm-libs</Package>
         <Package>lvm2</Package>
-        <Package>lzo</Package>
-        <Package>medit</Package>
-        <Package>mesa</Package>
-        <Package>mesa-glu</Package>
-        <Package>mit-kerberos</Package>
         <Package>ncurses</Package>
-        <Package>openssl</Package>
-        <Package>pango</Package>
-        <Package>pixman</Package>
-        <Package>python</Package>
         <Package>readline</Package>
-        <Package>run-parts</Package>
-        <Package>sqlite</Package>
-        <Package>tiff</Package>
-        <Package>wayland</Package>
         <Package>xcb-util</Package>
         <Package>xorg-app</Package>
-        <Package>xterm</Package>
-        <Package>xz</Package>
         <Package>zlib</Package>
     </PackageSelection>
     <RootImagePackages>
@@ -720,6 +684,7 @@
         <SelectedPackage>perl-Module-Build</SelectedPackage>
         <SelectedPackage>perl-XML-Simple</SelectedPackage>
         <SelectedPackage>squashfs-tools</SelectedPackage>
+        <SelectedPackage>sudo</SelectedPackage>
         <SelectedPackage>syslinux</SelectedPackage>
         <SelectedPackage>wpa_supplicant</SelectedPackage>
         <SelectedPackage>xfsprogs</SelectedPackage>
@@ -743,6 +708,7 @@
         <Package>cracklib</Package>
         <Package>cryptsetup</Package>
         <Package>curl</Package>
+        <Package>cyrus-sasl</Package>
         <Package>db</Package>
         <Package>dbus</Package>
         <Package>dbus-glib</Package>
@@ -783,6 +749,7 @@
         <Package>json-c</Package>
         <Package>kbd</Package>
         <Package>kernel</Package>
+        <Package>keyutils</Package>
         <Package>kmod</Package>
         <Package>less</Package>
         <Package>leveldb</Package>
@@ -828,6 +795,7 @@
         <Package>memtest86</Package>
         <Package>mingetty</Package>
         <Package>miscfiles</Package>
+        <Package>mit-kerberos</Package>
         <Package>mkinitcpio</Package>
         <Package>mpfr</Package>
         <Package>mtools</Package>
@@ -840,6 +808,7 @@
         <Package>nss</Package>
         <Package>nss-mdns</Package>
         <Package>ntfs-3g</Package>
+        <Package>openldap</Package>
         <Package>openrc</Package>
         <Package>openrc-services</Package>
         <Package>openssl</Package>
@@ -876,6 +845,7 @@
         <Package>spidermonkey</Package>
         <Package>sqlite</Package>
         <Package>squashfs-tools</Package>
+        <Package>sudo</Package>
         <Package>sysfsutils</Package>
         <Package>syslinux</Package>
         <Package>syslog-ng</Package>
@@ -910,6 +880,8 @@
         <SelectedPackage>bashdb</SelectedPackage>
         <SelectedPackage>efibootmgr</SelectedPackage>
         <SelectedPackage>efivar</SelectedPackage>
+        <SelectedPackage>firefox</SelectedPackage>
+        <SelectedPackage>git</SelectedPackage>
         <SelectedPackage>gparted</SelectedPackage>
         <SelectedPackage>grub2</SelectedPackage>
         <SelectedPackage>gvfs</SelectedPackage>
@@ -918,7 +890,6 @@
         <SelectedPackage>lightdm</SelectedPackage>
         <SelectedPackage>lightdm-gtk-greeter</SelectedPackage>
         <SelectedPackage>network-manager-applet</SelectedPackage>
-        <SelectedPackage>sudo</SelectedPackage>
         <SelectedPackage>xdg-user-dirs</SelectedPackage>
         <SelectedPackage>xdm</SelectedPackage>
         <SelectedPackage>xinit</SelectedPackage>
@@ -974,6 +945,7 @@
         <Package>exempi</Package>
         <Package>expat</Package>
         <Package>fftw3</Package>
+        <Package>firefox</Package>
         <Package>flac</Package>
         <Package>flex</Package>
         <Package>fontconfig</Package>
@@ -988,6 +960,7 @@
         <Package>gettext</Package>
         <Package>ghostscript</Package>
         <Package>giflib</Package>
+        <Package>git</Package>
         <Package>gksu</Package>
         <Package>glew</Package>
         <Package>glib-networking</Package>
@@ -1086,6 +1059,7 @@
         <Package>libedit</Package>
         <Package>libepoxy</Package>
         <Package>libevdev</Package>
+        <Package>libevent</Package>
         <Package>libexif</Package>
         <Package>libfakekey</Package>
         <Package>libffado</Package>
@@ -1148,6 +1122,7 @@
         <Package>libvdpau</Package>
         <Package>libvisual</Package>
         <Package>libvorbis</Package>
+        <Package>libvpx</Package>
         <Package>libwacom</Package>
         <Package>libwnck2</Package>
         <Package>libwnck3</Package>
@@ -1199,6 +1174,7 @@
         <Package>ntfs-3g</Package>
         <Package>openjpeg</Package>
         <Package>openldap</Package>
+        <Package>openssh</Package>
         <Package>openssl</Package>
         <Package>orbit2</Package>
         <Package>orc</Package>
@@ -1210,6 +1186,8 @@
         <Package>parted</Package>
         <Package>pcre2</Package>
         <Package>perl</Package>
+        <Package>perl-Error</Package>
+        <Package>perl-Module-Build</Package>
         <Package>perl-XML-Parser</Package>
         <Package>perl-XML-Simple</Package>
         <Package>pixman</Package>
@@ -1233,7 +1211,6 @@
         <Package>speex</Package>
         <Package>sqlite</Package>
         <Package>startup-notification</Package>
-        <Package>sudo</Package>
         <Package>sysfsutils</Package>
         <Package>t1lib</Package>
         <Package>tcl</Package>
@@ -1317,32 +1294,12 @@
     </DesktopImagePackages>
     <LivecdImagePackages>
         <SelectedPackage>cli-installer</SelectedPackage>
-        <SelectedPackage>medit</SelectedPackage>
         <SelectedPackage>xterm</SelectedPackage>
-        <Package>atk</Package>
-        <Package>avahi</Package>
         <Package>bzip2</Package>
-        <Package>ca-certificates</Package>
-        <Package>cairo</Package>
-        <Package>cli-installer</Package>
-        <Package>cups</Package>
         <Package>dialog</Package>
         <Package>dmraid</Package>
-        <Package>elfutils</Package>
-        <Package>expat</Package>
         <Package>fontconfig</Package>
-        <Package>freeglut</Package>
         <Package>freetype</Package>
-        <Package>gdbm</Package>
-        <Package>gdk-pixbuf</Package>
-        <Package>glib2</Package>
-        <Package>graphite2</Package>
-        <Package>gtk2</Package>
-        <Package>harfbuzz</Package>
-        <Package>icu4c</Package>
-        <Package>jasper</Package>
-        <Package>jbigkit</Package>
-        <Package>keyutils</Package>
         <Package>libFS</Package>
         <Package>libICE</Package>
         <Package>libSM</Package>
@@ -1367,49 +1324,20 @@
         <Package>libXt</Package>
         <Package>libXtst</Package>
         <Package>libXv</Package>
-        <Package>libXvMC</Package>
         <Package>libXxf86dga</Package>
         <Package>libXxf86misc</Package>
         <Package>libXxf86miscproto</Package>
         <Package>libXxf86vm</Package>
-        <Package>libdaemon</Package>
         <Package>libdmx</Package>
-        <Package>libdrm</Package>
-        <Package>libedit</Package>
-        <Package>libffi</Package>
         <Package>libfontenc</Package>
-        <Package>libgcc</Package>
-        <Package>libjpeg-turbo</Package>
-        <Package>libpaper</Package>
-        <Package>libpciaccess</Package>
-        <Package>libpcre</Package>
         <Package>libpng</Package>
         <Package>libxcb</Package>
         <Package>libxkbfile</Package>
-        <Package>libxml2</Package>
-        <Package>libxshmfence</Package>
-        <Package>llvm</Package>
-        <Package>llvm-libs</Package>
         <Package>lvm2</Package>
-        <Package>lzo</Package>
-        <Package>medit</Package>
-        <Package>mesa</Package>
-        <Package>mesa-glu</Package>
-        <Package>mit-kerberos</Package>
         <Package>ncurses</Package>
-        <Package>openssl</Package>
-        <Package>pango</Package>
-        <Package>pixman</Package>
-        <Package>python</Package>
         <Package>readline</Package>
-        <Package>run-parts</Package>
-        <Package>sqlite</Package>
-        <Package>tiff</Package>
-        <Package>wayland</Package>
         <Package>xcb-util</Package>
         <Package>xorg-app</Package>
-        <Package>xterm</Package>
-        <Package>xz</Package>
         <Package>zlib</Package>
     </LivecdImagePackages>
     <LanguageSelection default_language="en_US">
