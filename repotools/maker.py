@@ -366,7 +366,8 @@ def check_file(repo_dir, name, _hash):
         print "\nWrong hash: %s" % path
 
 def add_repo(project):  
-	global bus  
+    global bus  
+
     image_dir = project.image_dir()
 
     run('/bin/mount --bind /proc %s/proc' % image_dir)

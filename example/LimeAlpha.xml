@@ -625,6 +625,7 @@
         <Package>xz</Package>
         <Package>zlib</Package>
         <Package>bzip2</Package>
+        <Package>cli-installer</Package>
         <Package>dialog</Package>
         <Package>dmraid</Package>
         <Package>fontconfig</Package>
@@ -667,6 +668,7 @@
         <Package>readline</Package>
         <Package>xcb-util</Package>
         <Package>xorg-app</Package>
+        <Package>xterm</Package>
         <Package>zlib</Package>
     </PackageSelection>
     <RootImagePackages>
@@ -1296,6 +1298,7 @@
         <SelectedPackage>cli-installer</SelectedPackage>
         <SelectedPackage>xterm</SelectedPackage>
         <Package>bzip2</Package>
+        <Package>cli-installer</Package>
         <Package>dialog</Package>
         <Package>dmraid</Package>
         <Package>fontconfig</Package>
@@ -1338,6 +1341,7 @@
         <Package>readline</Package>
         <Package>xcb-util</Package>
         <Package>xorg-app</Package>
+        <Package>xterm</Package>
         <Package>zlib</Package>
     </LivecdImagePackages>
     <LanguageSelection default_language="en_US">
