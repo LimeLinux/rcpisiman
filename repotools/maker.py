@@ -365,20 +365,17 @@ def check_file(repo_dir, name, _hash):
     if cur_hash != _hash:
         print "\nWrong hash: %s" % path
 
-def add_repo(project):    
+def add_repo(project):  
+	global bus  
     image_dir = project.image_dir()
 
     run('/bin/mount --bind /proc %s/proc' % image_dir)
     run('/bin/mount --bind /sys %s/sys' % image_dir)
     run('/bin/mount --bind /dev %s/dev' %image_dir)
     
-    run("chroot \"%s\" /bin/service dbus start" % image_dir)
+    chroot_comar(image_dir)
     
     run("chroot \"%s\" /usr/bin/pisi rr limelinux-install" % image_dir)
-
-    
-    run("cp -p /etc/localtime %s/etc/." % image_dir,ignore_error=True)
-    run("cp -p /etc/resolv.conf %s/etc/." % image_dir,ignore_error=True)
 
     
     configdir =os.path.join(project.config_files)
@@ -386,7 +383,7 @@ def add_repo(project):
     
     address = open(os.path.join(configdir, "repo.conf")).read()
 
-    run("chroot \"%s\" /usr/bin/pisi ar pisi --yes-all  --ignore-check  \"%s\"" % (image_dir,address))
+    run("chroot \"%s\" /usr/bin/pisi ar lime --yes-all  --ignore-check  \"%s\"" % (image_dir,address))
     
     
     
@@ -395,8 +392,6 @@ def add_repo(project):
     run('umount %s/dev' % image_dir)
     
     run("rm -rf %s/run/dbus/*" % image_dir)
-    run("rm -rf %s/etc/localtime" % image_dir)
-    run("rm -rf %s/etc/resolv.conf" % image_dir)
     
 
 def make_image(project):
@@ -442,7 +437,7 @@ def make_image(project):
         image_dir = project.image_dir(clean=True)
         
         
-        run('pisi --yes-all -D"%s" ar pisilinux-install %s --ignore-check' % (image_dir, repo_dir + "/pisi-index.xml.bz2"))
+        run('pisi --yes-all -D"%s" ar limelinux-install %s --ignore-check' % (image_dir, repo_dir + "/pisi-index.xml.bz2"))
         print "project type = ",project.type
         
 
