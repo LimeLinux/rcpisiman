@@ -374,7 +374,7 @@ def add_repo(project):
     
     run("chroot \"%s\" /bin/service dbus start" % image_dir)
     
-    run("chroot \"%s\" /usr/bin/pisi rr pisilinux-install" % image_dir)
+    run("chroot \"%s\" /usr/bin/pisi rr limelinux-install" % image_dir)
 
     
     run("cp -p /etc/localtime %s/etc/." % image_dir,ignore_error=True)
@@ -514,7 +514,7 @@ def make_image(project):
         install_desktop(project)
         install_livecd_util(project)
         make_initrd(project)
-     #   add_repo(project)
+        add_repo(project)
         
     except KeyboardInterrupt:
         print "Keyboard Interrupt: make_image() cancelled."
@@ -542,7 +542,6 @@ def install_desktop(project):
     
     chroot_comar(desktop_image_dir)
     
-   # run("chroot \"%s\" /bin/service dbus start" % desktop_image_dir)
 
     run("chroot \"%s\" /usr/bin/pisi cp" % desktop_image_dir)
     
@@ -550,7 +549,6 @@ def install_desktop(project):
     run("chroot \"%s\" /sbin/rc-update add xdm default" % desktop_image_dir)
     run("chroot \"%s\" /sbin/rc-update add networkmanager default" % desktop_image_dir)
 
-   # run("chroot \"%s\" /bin/service dbus stop" % desktop_image_dir)
     
     run('umount %s/proc' % desktop_image_dir)
     run('umount %s/sys' % desktop_image_dir)
@@ -609,13 +607,10 @@ def install_livecd_util(project):
     
     chroot_comar(livecd_image_dir)
     
-  #  run("chroot \"%s\" /bin/service dbus start" % livecd_image_dir)
+
     run("chroot \"%s\" /usr/bin/pisi cp" % livecd_image_dir)
     
-    
-   # run("chroot \"%s\" /bin/service dbus stop" % livecd_image_dir)
-
-  
+      
     run('umount %s/proc' % livecd_image_dir, ignore_error=True)
     run('umount %s/sys' % livecd_image_dir, ignore_error=True)
 
