@@ -506,7 +506,20 @@ def make_image(project):
         
         run('/bin/umount -R %s' % image_dir, ignore_error=True)
         run("rm -rf %s/run/dbus/*" % image_dir, ignore_error=True)
-       
+
+        #setup liveuser
+               
+        chrun("rm -rf /etc/sudoers")
+
+        path1 = os.path.join(image_dir, "etc/sudoers.orig")
+        path2 = os.path.join(image_dir, "etc/sudoers")
+        
+        run('cp "%s" "%s"' % (path1, path2))
+        
+        run("/bin/echo 'limelive ALL=(ALL) NOPASSWD: ALL' >> %s/etc/sudoers" % image_dir)
+        
+        run("/bin/chmod 440 %s/etc/sudoers" % image_dir)
+
         install_desktop(project)
         install_livecd_util(project)
         make_initrd(project)
