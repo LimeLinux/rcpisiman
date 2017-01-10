@@ -597,13 +597,13 @@ def install_livecd_util(project):
     run("cp -p %s/live/sudoers/* %s/etc/sudoers.d/." % (configdir,livecd_image_dir),ignore_error=True)
 
     
-    path = os.path.join(livecd_image_dir, "home/limelive/.config")
-    if not os.path.exists(path):
-        os.makedirs(path)
+   # path = os.path.join(livecd_image_dir, "home/limelive/.config")
+   # if not os.path.exists(path):
+    #    os.makedirs(path)
         
-    run("cp -p %s/live/kde/.config/* %s/home/limelive/.config/." % (configdir,livecd_image_dir),ignore_error=True)
-    os.system('/bin/chown 1000:100 "%s/home/limelive/.config"' % livecd_image_dir)
-    os.chmod(path, 0711)
+   # run("cp -p %s/live/kde/.config/* %s/home/limelive/.config/." % (configdir,livecd_image_dir),ignore_error=True)
+   # os.system('/bin/chown 1000:100 "%s/home/limelive/.config"' % livecd_image_dir)
+   # os.chmod(path, 0711)
     
     chroot_comar(livecd_image_dir)
     
