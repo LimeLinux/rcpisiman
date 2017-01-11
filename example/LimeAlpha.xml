@@ -2,7 +2,7 @@
     <Title>LimeAlphav1</Title>
     <WorkDir>/home/lime/isos</WorkDir>
     <ConfigFiles>/home/lime/git/rcpisiman/config</ConfigFiles>
-    <PackageSelection repo_uri="file:///home/lime/depo/pisi-index.xml.xz">
+    <PackageSelection repo_uri="http://package.limelinux.com/1.0-devel/pisi-index.xml.xz">
         <SelectedComponent>system.base</SelectedComponent>
         <SelectedComponent>desktop.mate.base</SelectedComponent>
         <SelectedComponent>x11.driver</SelectedComponent>
