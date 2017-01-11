@@ -2,7 +2,7 @@
     <Title>LimeAlphav1</Title>
     <WorkDir>/home/lime/isos</WorkDir>
     <ConfigFiles>/home/lime/git/rcpisiman/config</ConfigFiles>
-    <PackageSelection repo_uri="http://package.limelinux.com/1.0-devel/pisi-index.xml.xz">
+    <PackageSelection repo_uri="file:///home/lime/depo/pisi-index.xml.xz">
         <SelectedComponent>system.base</SelectedComponent>
         <SelectedComponent>desktop.mate.base</SelectedComponent>
         <SelectedComponent>x11.driver</SelectedComponent>
@@ -26,7 +26,6 @@
         <SelectedPackage>wpa_supplicant</SelectedPackage>
         <SelectedPackage>xfsprogs</SelectedPackage>
         <SelectedPackage>xmlto</SelectedPackage>
-        <SelectedPackage>NetworkManager</SelectedPackage>
         <SelectedPackage>audacious</SelectedPackage>
         <SelectedPackage>audacious-plugins</SelectedPackage>
         <SelectedPackage>bash-completion</SelectedPackage>
@@ -40,9 +39,12 @@
         <SelectedPackage>gvfs</SelectedPackage>
         <SelectedPackage>icon-theme-adwaita</SelectedPackage>
         <SelectedPackage>icon-theme-hicolor</SelectedPackage>
+        <SelectedPackage>libproxy</SelectedPackage>
         <SelectedPackage>lightdm</SelectedPackage>
         <SelectedPackage>lightdm-gtk-greeter</SelectedPackage>
+        <SelectedPackage>media-player-info</SelectedPackage>
         <SelectedPackage>network-manager-applet</SelectedPackage>
+        <SelectedPackage>NetworkManager</SelectedPackage>
         <SelectedPackage>xdg-user-dirs</SelectedPackage>
         <SelectedPackage>xdm</SelectedPackage>
         <SelectedPackage>xinit</SelectedPackage>
@@ -429,6 +431,7 @@
         <Package>libpcre</Package>
         <Package>libplist</Package>
         <Package>libpng</Package>
+        <Package>libproxy</Package>
         <Package>libraw1394</Package>
         <Package>librsvg</Package>
         <Package>libsamplerate</Package>
@@ -492,6 +495,7 @@
         <Package>mate-themes</Package>
         <Package>mate-user-share</Package>
         <Package>mate-utils</Package>
+        <Package>media-player-info</Package>
         <Package>mesa</Package>
         <Package>mesa-glu</Package>
         <Package>mit-kerberos</Package>
@@ -889,8 +893,10 @@
         <SelectedPackage>gvfs</SelectedPackage>
         <SelectedPackage>icon-theme-adwaita</SelectedPackage>
         <SelectedPackage>icon-theme-hicolor</SelectedPackage>
+        <SelectedPackage>libproxy</SelectedPackage>
         <SelectedPackage>lightdm</SelectedPackage>
         <SelectedPackage>lightdm-gtk-greeter</SelectedPackage>
+        <SelectedPackage>media-player-info</SelectedPackage>
         <SelectedPackage>network-manager-applet</SelectedPackage>
         <SelectedPackage>xdg-user-dirs</SelectedPackage>
         <SelectedPackage>xdm</SelectedPackage>
@@ -1098,6 +1104,7 @@
         <Package>libpcre</Package>
         <Package>libplist</Package>
         <Package>libpng</Package>
+        <Package>libproxy</Package>
         <Package>libraw1394</Package>
         <Package>librsvg</Package>
         <Package>libsamplerate</Package>
@@ -1161,6 +1168,7 @@
         <Package>mate-themes</Package>
         <Package>mate-user-share</Package>
         <Package>mate-utils</Package>
+        <Package>media-player-info</Package>
         <Package>mesa</Package>
         <Package>mesa-glu</Package>
         <Package>mit-kerberos</Package>

@@ -372,7 +372,6 @@ def add_repo(project):
 
     run('/bin/mount --bind /proc %s/proc' % image_dir)
     run('/bin/mount --bind /sys %s/sys' % image_dir)
-    run('/bin/mount --bind /dev %s/dev' %image_dir)
     
     chroot_comar(image_dir)
     
@@ -387,7 +386,6 @@ def add_repo(project):
     run("chroot \"%s\" /usr/bin/pisi ar lime --yes-all  --ignore-check  --no-fetch \"%s\"" % (image_dir,address))
     
     
-    run('/bin/umount %s/dev' % image_dir, ignore_error=True)
     run('/bin/umount %s/proc' % image_dir, ignore_error=True)
     run('/bin/umount %s/sys' % image_dir, ignore_error=True)
     run('/bin/umount -R %s' % image_dir, ignore_error=True)
@@ -474,7 +472,6 @@ def make_image(project):
         run('/bin/mount --bind /sys %s/sys' % image_dir)
 
         chrun("/sbin/ldconfig")
-       # chrun("/sbin/update-environment")
            
         chroot_comar(image_dir)
         chrun("/usr/bin/pisi configure-pending baselayout")
@@ -607,6 +604,19 @@ def install_livecd_util(project):
     
     run("cp -p %s/live/sudoers/* %s/etc/sudoers.d/." % (configdir,livecd_image_dir),ignore_error=True)
 
+
+    
+    run("cp -p %s/live/openrc/util-live.sh %s/usr/lib/lime-tools/." % (configdir,livecd_image_dir),ignore_error=True)
+
+    run("cp -p %s/live/openrc/lime-live %s/usr/bin/." % (configdir,livecd_image_dir),ignore_error=True)
+    run("/bin/chmod 0755 %s/usr/bin/lime-live" % livecd_image_dir)
+
+    run("cp -p %s/live/openrc/lime-live.initd %s/etc/init.d/lime-live" % (configdir,livecd_image_dir),ignore_error=True)
+    run("/bin/chmod 0755 %s//etc/init.d/lime-live" % livecd_image_dir)
+
+    run("cp -p %s/live/openrc/kbd-model.map %s/usr/share/lime-tools/." % (configdir,livecd_image_dir),ignore_error=True)
+
+    run("chroot \"%s\" /sbin/rc-update add lime-live default" % livecd_image_dir)
     
    # path = os.path.join(livecd_image_dir, "home/limelive/.config")
    # if not os.path.exists(path):
