@@ -1,8 +1,8 @@
 <PisiManProject type="None" compression="xz">
-    <Title>LimeAlphav1</Title>
+    <Title>Lime_Alpha_kalamarli_v1</Title>
     <WorkDir>/home/lime/isos</WorkDir>
     <ConfigFiles>/home/lime/git/rcpisiman/config</ConfigFiles>
-    <PackageSelection repo_uri="http://package.limelinux.com/1.0-devel/pisi-index.xml.xz">
+    <PackageSelection repo_uri="file:///home/lime/depo/pisi-index.xml.xz">
         <SelectedComponent>system.base</SelectedComponent>
         <SelectedComponent>desktop.mate.base</SelectedComponent>
         <SelectedComponent>x11.driver</SelectedComponent>
@@ -26,6 +26,7 @@
         <SelectedPackage>wpa_supplicant</SelectedPackage>
         <SelectedPackage>xfsprogs</SelectedPackage>
         <SelectedPackage>xmlto</SelectedPackage>
+        <SelectedPackage>NetworkManager</SelectedPackage>
         <SelectedPackage>audacious</SelectedPackage>
         <SelectedPackage>audacious-plugins</SelectedPackage>
         <SelectedPackage>bash-completion</SelectedPackage>
@@ -44,11 +45,11 @@
         <SelectedPackage>lightdm-gtk-greeter</SelectedPackage>
         <SelectedPackage>media-player-info</SelectedPackage>
         <SelectedPackage>network-manager-applet</SelectedPackage>
-        <SelectedPackage>NetworkManager</SelectedPackage>
         <SelectedPackage>xdg-user-dirs</SelectedPackage>
         <SelectedPackage>xdm</SelectedPackage>
         <SelectedPackage>xinit</SelectedPackage>
         <SelectedPackage>xkeyboard-config</SelectedPackage>
+        <SelectedPackage>calamares</SelectedPackage>
         <SelectedPackage>cli-installer</SelectedPackage>
         <SelectedPackage>xterm</SelectedPackage>
         <Package>ConsoleKit</Package>
@@ -628,12 +629,68 @@
         <Package>xvba-video</Package>
         <Package>xz</Package>
         <Package>zlib</Package>
+        <Package>acl</Package>
+        <Package>alsa-lib</Package>
+        <Package>aspell</Package>
+        <Package>attica</Package>
+        <Package>attr</Package>
+        <Package>boost</Package>
         <Package>bzip2</Package>
+        <Package>ca-certificates</Package>
+        <Package>calamares</Package>
         <Package>cli-installer</Package>
+        <Package>cracklib</Package>
+        <Package>db</Package>
         <Package>dialog</Package>
+        <Package>dmidecode</Package>
         <Package>dmraid</Package>
+        <Package>docbook-xml</Package>
+        <Package>docbook-xsl</Package>
+        <Package>dosfstools</Package>
+        <Package>e2fsprogs</Package>
+        <Package>efibootmgr</Package>
+        <Package>efivar</Package>
+        <Package>elfutils</Package>
+        <Package>eudev</Package>
+        <Package>expat</Package>
         <Package>fontconfig</Package>
         <Package>freetype</Package>
+        <Package>fuse</Package>
+        <Package>gdbm</Package>
+        <Package>gettext</Package>
+        <Package>glib2</Package>
+        <Package>gptfdisk</Package>
+        <Package>gstreamer</Package>
+        <Package>hunspell</Package>
+        <Package>icu4c</Package>
+        <Package>jbigkit</Package>
+        <Package>karchive</Package>
+        <Package>kauth</Package>
+        <Package>kbookmarks</Package>
+        <Package>kcodecs</Package>
+        <Package>kcompletion</Package>
+        <Package>kconfig</Package>
+        <Package>kconfigwidgets</Package>
+        <Package>kcoreaddons</Package>
+        <Package>kcrash</Package>
+        <Package>kdbusaddons</Package>
+        <Package>keyutils</Package>
+        <Package>kglobalaccel</Package>
+        <Package>kguiaddons</Package>
+        <Package>ki18n</Package>
+        <Package>kiconthemes</Package>
+        <Package>kio</Package>
+        <Package>kitemviews</Package>
+        <Package>kjobwidgets</Package>
+        <Package>kmod</Package>
+        <Package>kparts</Package>
+        <Package>kpmcore</Package>
+        <Package>kservice</Package>
+        <Package>ktextwidgets</Package>
+        <Package>kwidgetsaddons</Package>
+        <Package>kwindowsystem</Package>
+        <Package>kxmlgui</Package>
+        <Package>lcms2</Package>
         <Package>libFS</Package>
         <Package>libICE</Package>
         <Package>libSM</Package>
@@ -658,21 +715,69 @@
         <Package>libXt</Package>
         <Package>libXtst</Package>
         <Package>libXv</Package>
+        <Package>libXvMC</Package>
         <Package>libXxf86dga</Package>
         <Package>libXxf86misc</Package>
         <Package>libXxf86miscproto</Package>
         <Package>libXxf86vm</Package>
+        <Package>libatasmart</Package>
+        <Package>libcap-ng</Package>
         <Package>libdmx</Package>
+        <Package>libdrm</Package>
+        <Package>libedit</Package>
+        <Package>libffi</Package>
         <Package>libfontenc</Package>
+        <Package>libgcc</Package>
+        <Package>libgcrypt</Package>
+        <Package>libgpg-error</Package>
+        <Package>libjpeg-turbo</Package>
+        <Package>libmng</Package>
+        <Package>libpciaccess</Package>
+        <Package>libpcre</Package>
         <Package>libpng</Package>
+        <Package>libunistring</Package>
         <Package>libxcb</Package>
         <Package>libxkbfile</Package>
+        <Package>libxml2</Package>
+        <Package>libxshmfence</Package>
+        <Package>libxslt</Package>
+        <Package>llvm</Package>
+        <Package>llvm-libs</Package>
         <Package>lvm2</Package>
+        <Package>media-player-info</Package>
+        <Package>mesa</Package>
+        <Package>mit-kerberos</Package>
         <Package>ncurses</Package>
+        <Package>nspr</Package>
+        <Package>ntfs-3g</Package>
+        <Package>openssl</Package>
+        <Package>pam</Package>
+        <Package>parted</Package>
+        <Package>partitionmanager</Package>
+        <Package>perl</Package>
+        <Package>polkit</Package>
+        <Package>polkit-qt</Package>
+        <Package>popt</Package>
+        <Package>python</Package>
+        <Package>python3</Package>
+        <Package>qt5</Package>
         <Package>readline</Package>
+        <Package>rsync</Package>
+        <Package>run-parts</Package>
+        <Package>sgml-common</Package>
+        <Package>shared-mime-info</Package>
+        <Package>solid</Package>
+        <Package>sonnet</Package>
+        <Package>spidermonkey</Package>
+        <Package>sqlite</Package>
+        <Package>tiff</Package>
+        <Package>util-linux</Package>
+        <Package>wayland</Package>
         <Package>xcb-util</Package>
+        <Package>xcb-util-keysyms</Package>
         <Package>xorg-app</Package>
         <Package>xterm</Package>
+        <Package>xz</Package>
         <Package>zlib</Package>
     </PackageSelection>
     <RootImagePackages>
@@ -1303,14 +1408,71 @@
         <Package>zlib</Package>
     </DesktopImagePackages>
     <LivecdImagePackages>
+        <SelectedPackage>calamares</SelectedPackage>
         <SelectedPackage>cli-installer</SelectedPackage>
         <SelectedPackage>xterm</SelectedPackage>
+        <Package>acl</Package>
+        <Package>alsa-lib</Package>
+        <Package>aspell</Package>
+        <Package>attica</Package>
+        <Package>attr</Package>
+        <Package>boost</Package>
         <Package>bzip2</Package>
+        <Package>ca-certificates</Package>
+        <Package>calamares</Package>
         <Package>cli-installer</Package>
+        <Package>cracklib</Package>
+        <Package>db</Package>
         <Package>dialog</Package>
+        <Package>dmidecode</Package>
         <Package>dmraid</Package>
+        <Package>docbook-xml</Package>
+        <Package>docbook-xsl</Package>
+        <Package>dosfstools</Package>
+        <Package>e2fsprogs</Package>
+        <Package>efibootmgr</Package>
+        <Package>efivar</Package>
+        <Package>elfutils</Package>
+        <Package>eudev</Package>
+        <Package>expat</Package>
         <Package>fontconfig</Package>
         <Package>freetype</Package>
+        <Package>fuse</Package>
+        <Package>gdbm</Package>
+        <Package>gettext</Package>
+        <Package>glib2</Package>
+        <Package>gptfdisk</Package>
+        <Package>gstreamer</Package>
+        <Package>hunspell</Package>
+        <Package>icu4c</Package>
+        <Package>jbigkit</Package>
+        <Package>karchive</Package>
+        <Package>kauth</Package>
+        <Package>kbookmarks</Package>
+        <Package>kcodecs</Package>
+        <Package>kcompletion</Package>
+        <Package>kconfig</Package>
+        <Package>kconfigwidgets</Package>
+        <Package>kcoreaddons</Package>
+        <Package>kcrash</Package>
+        <Package>kdbusaddons</Package>
+        <Package>keyutils</Package>
+        <Package>kglobalaccel</Package>
+        <Package>kguiaddons</Package>
+        <Package>ki18n</Package>
+        <Package>kiconthemes</Package>
+        <Package>kio</Package>
+        <Package>kitemviews</Package>
+        <Package>kjobwidgets</Package>
+        <Package>kmod</Package>
+        <Package>kparts</Package>
+        <Package>kpmcore</Package>
+        <Package>kservice</Package>
+        <Package>ktextwidgets</Package>
+        <Package>kwidgetsaddons</Package>
+        <Package>kwindowsystem</Package>
+        <Package>kxmlgui</Package>
+        <Package>lcms2</Package>
         <Package>libFS</Package>
         <Package>libICE</Package>
         <Package>libSM</Package>
@@ -1335,21 +1497,69 @@
         <Package>libXt</Package>
         <Package>libXtst</Package>
         <Package>libXv</Package>
+        <Package>libXvMC</Package>
         <Package>libXxf86dga</Package>
         <Package>libXxf86misc</Package>
         <Package>libXxf86miscproto</Package>
         <Package>libXxf86vm</Package>
+        <Package>libatasmart</Package>
+        <Package>libcap-ng</Package>
         <Package>libdmx</Package>
+        <Package>libdrm</Package>
+        <Package>libedit</Package>
+        <Package>libffi</Package>
         <Package>libfontenc</Package>
+        <Package>libgcc</Package>
+        <Package>libgcrypt</Package>
+        <Package>libgpg-error</Package>
+        <Package>libjpeg-turbo</Package>
+        <Package>libmng</Package>
+        <Package>libpciaccess</Package>
+        <Package>libpcre</Package>
         <Package>libpng</Package>
+        <Package>libunistring</Package>
         <Package>libxcb</Package>
         <Package>libxkbfile</Package>
+        <Package>libxml2</Package>
+        <Package>libxshmfence</Package>
+        <Package>libxslt</Package>
+        <Package>llvm</Package>
+        <Package>llvm-libs</Package>
         <Package>lvm2</Package>
+        <Package>media-player-info</Package>
+        <Package>mesa</Package>
+        <Package>mit-kerberos</Package>
         <Package>ncurses</Package>
+        <Package>nspr</Package>
+        <Package>ntfs-3g</Package>
+        <Package>openssl</Package>
+        <Package>pam</Package>
+        <Package>parted</Package>
+        <Package>partitionmanager</Package>
+        <Package>perl</Package>
+        <Package>polkit</Package>
+        <Package>polkit-qt</Package>
+        <Package>popt</Package>
+        <Package>python</Package>
+        <Package>python3</Package>
+        <Package>qt5</Package>
         <Package>readline</Package>
+        <Package>rsync</Package>
+        <Package>run-parts</Package>
+        <Package>sgml-common</Package>
+        <Package>shared-mime-info</Package>
+        <Package>solid</Package>
+        <Package>sonnet</Package>
+        <Package>spidermonkey</Package>
+        <Package>sqlite</Package>
+        <Package>tiff</Package>
+        <Package>util-linux</Package>
+        <Package>wayland</Package>
         <Package>xcb-util</Package>
+        <Package>xcb-util-keysyms</Package>
         <Package>xorg-app</Package>
         <Package>xterm</Package>
+        <Package>xz</Package>
         <Package>zlib</Package>
     </LivecdImagePackages>
     <LanguageSelection default_language="en_US">
