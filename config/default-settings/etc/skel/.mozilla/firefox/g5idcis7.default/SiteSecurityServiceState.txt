@@ -1,7 +1,0 @@
-self-repair.mozilla.org:HPKP	0	17254	1490896652639,1,0,WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18=r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E=YLh1dUR9y6Kja30RrAn7JKnbQG/uEtLMkBgFF2Fuihg=sRHdihwgkaib1P1gxX8HFszlD+7/gTfNvuAybgLPNis=
-www.google-analytics.com:HSTS	0	17254	1501696660920,1,1
-shavar.services.mozilla.com:HSTS	0	17254	1522346247492,1,1
-self-repair.mozilla.org:HSTS	0	17254	1522346252635,1,1
-normandy-cloudfront.cdn.mozilla.net:HPKP	0	17254	1490896652893,1,0,WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18=r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E=YLh1dUR9y6Kja30RrAn7JKnbQG/uEtLMkBgFF2Fuihg=sRHdihwgkaib1P1gxX8HFszlD+7/gTfNvuAybgLPNis=
-www.google.com:HSTS	0	17254	1490896659958,1,0
-normandy-cloudfront.cdn.mozilla.net:HSTS	0	17254	1522346252893,1,1
