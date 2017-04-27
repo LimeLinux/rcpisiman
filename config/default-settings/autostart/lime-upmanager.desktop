@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=limelinux-update-manager
+Name[tr]=limelinux-update-manager
+GenericName=limelinux-update-manager
+GenericName[tr]=limelinux-güncelleme-merkezi
+Icon=/usr/share/pixmaps/lime-update-manager.png
+Exec=lime-upmanager
+Categories=System;Network;
+Name[tr_TR]=lime-upmanager

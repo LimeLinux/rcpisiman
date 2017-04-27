@@ -393,6 +393,7 @@ def add_repo(project):
 
 
     run("rm -rf %s/run/dbus/*" % image_dir)
+    run("rm -rf %s/var/lib/pisi/info/files.ldb/LOCK" % image_dir)
     
 
 def make_image(project):
@@ -535,6 +536,7 @@ def install_desktop(project):
     xterm_title("Preparing desktop image")
     
     image_dir = project.image_dir()
+    configdir =os.path.join(project.config_files)
     
    
     desktop_image_dir = project.desktop_image_dir(clean=True)
@@ -553,6 +555,11 @@ def install_desktop(project):
 
     run("chroot \"%s\" /usr/bin/pisi cp" % desktop_image_dir)
     
+    
+           #Mate KURULAN AYAR
+    
+    run("cp -rf %s/default-settings/etc/* %s/etc/" % (configdir,desktop_image_dir))
+    
 
     run("chroot \"%s\" /sbin/rc-update add xdm default" % desktop_image_dir)
     run("chroot \"%s\" /sbin/rc-update add networkmanager default" % desktop_image_dir)
@@ -565,6 +572,7 @@ def install_desktop(project):
     run('/bin/umount -R %s' % desktop_image_dir, ignore_error=True)
     run('/bin/umount -l %s' % desktop_image_dir, ignore_error=True)
     run("rm -rf %s/run/dbus/*" % desktop_image_dir, ignore_error=True)
+    run("rm -rf %s/var/lib/pisi/info/files.ldb/LOCK" % desktop_image_dir, ignore_error=True)
     
    
     setup_live_lightdm(project)
@@ -593,38 +601,41 @@ def install_livecd_util(project):
     run('/bin/mount --bind /sys %s/sys' % livecd_image_dir)
     
     
-    path = os.path.join(livecd_image_dir, "etc/calamares/modules")
-    if not os.path.exists(path):
-        os.makedirs(path)
+    #path = os.path.join(livecd_image_dir, "etc/calamares/modules")
+    #if not os.path.exists(path):
+        #os.makedirs(path)
     
-    run("cp -p %s/calamares/modules/* %s/etc/calamares/modules/." % (configdir,livecd_image_dir))
-    run("cp -p %s/calamares/* %s/etc/calamares/." % (configdir,livecd_image_dir),ignore_error=True)
+    #run("cp -p %s/calamares/modules/* %s/etc/calamares/modules/." % (configdir,livecd_image_dir))
+    #run("cp -p %s/calamares/* %s/etc/calamares/." % (configdir,livecd_image_dir),ignore_error=True)
 
-    run("cp -p %s/calamares/* %s/etc/calamares/." % (configdir,livecd_image_dir),ignore_error=True)
+    #run("cp -p %s/calamares/* %s/etc/calamares/." % (configdir,livecd_image_dir),ignore_error=True)
     
-    run("cp -p %s/live/sudoers/* %s/etc/sudoers.d/." % (configdir,livecd_image_dir),ignore_error=True)
+    run("cp -p %s/live/sudoers/* %s/etc/sudoers.d/" % (configdir,livecd_image_dir),ignore_error=True)
 
 
     
-    run("cp -p %s/live/openrc/util-live.sh %s/usr/lib/lime-tools/." % (configdir,livecd_image_dir),ignore_error=True)
+    run("cp -rf %s/live/openrc/lib/lime-tools %s/usr/lib/" % (configdir,livecd_image_dir),ignore_error=True)
 
-    run("cp -p %s/live/openrc/lime-live %s/usr/bin/." % (configdir,livecd_image_dir),ignore_error=True)
+    run("cp -p %s/live/openrc/lime-live %s/usr/bin/" % (configdir,livecd_image_dir),ignore_error=True)
     run("/bin/chmod 0755 %s/usr/bin/lime-live" % livecd_image_dir)
 
     run("cp -p %s/live/openrc/lime-live.initd %s/etc/init.d/lime-live" % (configdir,livecd_image_dir),ignore_error=True)
-    run("/bin/chmod 0755 %s//etc/init.d/lime-live" % livecd_image_dir)
+    run("/bin/chmod 0755 %s/etc/init.d/lime-live" % livecd_image_dir)
 
-    run("cp -p %s/live/openrc/kbd-model.map %s/usr/share/lime-tools/." % (configdir,livecd_image_dir),ignore_error=True)
+    run("cp -rf %s/live/openrc/share/lime-tools %s/usr/share/" % (configdir,livecd_image_dir),ignore_error=True)
 
     run("chroot \"%s\" /sbin/rc-update add lime-live default" % livecd_image_dir)
     
-   # path = os.path.join(livecd_image_dir, "home/limelive/.config")
-   # if not os.path.exists(path):
-    #    os.makedirs(path)
+    path = os.path.join(livecd_image_dir, "home/limelive/")
+    if not os.path.exists(path):
+        os.makedirs(path)
         
-   # run("cp -p %s/live/kde/.config/* %s/home/limelive/.config/." % (configdir,livecd_image_dir),ignore_error=True)
-   # os.system('/bin/chown 1000:100 "%s/home/limelive/.config"' % livecd_image_dir)
-   # os.chmod(path, 0711)
+    #Mate LİVE AYAR
+    
+    run("cp -rf %s/live/live-desktop/autostart %s/home/limelive/.config/" % (configdir,livecd_image_dir),ignore_error=True)
+    run("cp -rf %s/live/live-desktop/Desktop %s/home/limelive/" % (configdir,livecd_image_dir),ignore_error=True)
+    os.system('/bin/chown 1000:wheel "%s/home/limelive/Desktop/*"' % livecd_image_dir)
+    os.chmod(path, 0777)
     
     chroot_comar(livecd_image_dir)
     
@@ -639,6 +650,7 @@ def install_livecd_util(project):
     run('/bin/umount -R %s' % livecd_image_dir, ignore_error=True)
     run('/bin/umount -l %s' % livecd_image_dir, ignore_error=True)
     run("rm -rf %s/run/dbus/*" % livecd_image_dir, ignore_error=True)
+    run("rm -rf %s/var/lib/pisi/info/files.ldb/LOCK" % livecd_image_dir, ignore_error=True)
 
 
 def make_initrd(project):
@@ -709,9 +721,11 @@ def generate_sort_list(iso_dir):
 
     return package_list
 
+    
 def make_EFI(project):
     
     work_dir = os.path.join(project.work_dir)
+    img_dir = os.path.join(project.work_dir)
     configdir =os.path.join(project.config_files)
     iso_dir = project.iso_dir()
     efi_tmp = project.efi_tmp_path_dir(clean=True)
@@ -723,49 +737,34 @@ def make_EFI(project):
     if not os.path.exists(efi_path):
         os.makedirs(efi_path) 
         os.makedirs(os.path.join(efi_path, "boot"))
-        os.makedirs(os.path.join(efi_path, "pisi"))
 
-    
-    loader_path = os.path.join(iso_dir, "loader")
-    
-    if not os.path.exists(loader_path):
-        os.makedirs(loader_path) 
-        os.makedirs(os.path.join(loader_path, "entries"))
-    
-    
     
     run("rm -rf %s/pisi.img" % work_dir)
-    
 
-    run("cp -p %s/efi/loaders/loader.conf %s/." % (configdir, loader_path))
-    run("cp -p %s/efi/loaders/entries/* %s/entries/." % (configdir, loader_path))
     
-  #  os.unlink(os.path.join(loader_path, "entries/pisi-efi-x86_64.conf"))
-    
-    run("cp -p %s/efi/preloader/boot/* %s/boot/." % (configdir, efi_path))
      
-    run("cp -p %s/efi/preloader/* %s/." % (configdir, efi_path),ignore_error=True)
+    run("cp -rf %s/efi/preloader/* %s/boot/" % (configdir, efi_path))
+    run("cp -rf %s/autorun/* %s/." % (configdir, iso_dir))
+    
+    run("cp -rf %s/boot/kernel* %s/EFI/boot/kernel.efi" % (image_dir,iso_dir))  
+    run("cp -rf %s/boot/initramfs* %s/EFI/boot/initrd.img" % (image_dir,iso_dir))
     
     
     run("dd if=/dev/zero bs=1M count=40 of=%s/pisi.img"% work_dir)
-    run("mkfs.vfat -n PISI_EFI %s/pisi.img"% work_dir)
+    run("mkfs.vfat -n LimeLinux %s/pisi.img"% work_dir)
     run("mount %s/pisi.img %s"% (work_dir,efi_tmp))
     
-    os.makedirs(os.path.join(efi_tmp, "loader"))
-    os.makedirs(os.path.join(efi_tmp, "EFI"))
+    
+    os.makedirs(os.path.join(efi_tmp, "EFI/boot"))
 
-    run("cp -r %s/* %s/EFI/." % (efi_path, efi_tmp),ignore_error=True)
-    
-    run("cp -r %s/* %s/loader/." % (loader_path, efi_tmp),ignore_error=True)
-    
-   # os.unlink(os.path.join(efi_tmp, "loader/entries/pisi-x86_64.conf"))
-    
-    run("cp -p %s/boot/kernel* %s/EFI/pisi/kernel.efi" % (image_dir,efi_tmp))  
-    run("cp -p %s/boot/initramfs* %s/EFI/pisi/initrd.img" % (image_dir,efi_tmp))  
-
+    run("cp -r %s/EFI/boot/* %s/EFI/boot/" % (iso_dir, efi_tmp),ignore_error=True)
     
     run("umount %s"% efi_tmp,ignore_error=True)
     run("umount -l %s"% efi_tmp,ignore_error=True)
+    
+
+    
+
     
         
         
@@ -792,10 +791,10 @@ def make_iso(project):
 
         
 
-       # make_EFI(project)
+        make_EFI(project)
         run("cp -p %s/isomounts %s/." % (configdir, image_path))
         run("cp -p %s/*sqfs %s/x86_64/." % (work_dir, image_path))
-       # run("cp -p %s/pisi.img %s/EFI/pisi/." % (work_dir, iso_dir))
+        run("cp -p %s/pisi.img %s/EFI/." % (work_dir, iso_dir))
 
    
         run("touch %s/.miso" % iso_dir)
@@ -821,9 +820,8 @@ def make_iso(project):
             -relaxed-filenames -allow-lowercase -volid "%s" -publisher "%s" -appid "%s" \
             -preparer "prepared by pisiman" -eltorito-boot isolinux/isolinux.bin \
             -eltorito-catalog isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table \
-            -isohybrid-mbr "%s/isolinux/isohdpfx.bin"  \
+            -isohybrid-mbr "%s/isolinux/isohdpfx.bin" -eltorito-alt-boot -e /EFI/pisi.img -isohybrid-gpt-basdat -no-emul-boot \
             -output "%s" "%s/iso/"'% (label, publisher ,application, iso_dir, iso_file, work_dir)
-       #-eltorito-alt-boot -e EFI/pisi/pisi.img -isohybrid-gpt-basdat -no-emul-boot
        
        
         run(cmd)

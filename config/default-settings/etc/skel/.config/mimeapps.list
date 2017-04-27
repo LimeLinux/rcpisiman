@@ -1,0 +1,7 @@
+[Default Applications]
+application/x-extension-tdb=pluma.desktop
+application/octet-stream=pluma.desktop
+
+[Added Associations]
+application/x-extension-tdb=pluma.desktop;
+application/octet-stream=pluma.desktop;

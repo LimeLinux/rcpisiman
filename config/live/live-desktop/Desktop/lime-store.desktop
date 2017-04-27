@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=limelinux-store
+Name[tr]=limelinux-store
+GenericName=limelinux-store
+GenericName[tr]=limelinux-market
+Icon=/usr/share/pixmaps/lime-store.png
+Exec=lime-store
+Categories=System;Network;
+Name[tr_TR]=lime-store

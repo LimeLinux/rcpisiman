@@ -1,0 +1,13 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Encoding=UTF-8
+Name=Firefox
+GenericName=Web Browser
+Comment=Browse the Web
+Exec=firefox
+Icon=/usr/share/pixmaps/firefox.png
+Terminal=false
+Type=Application
+StartupNotify=true
+MimeType=text/html;text/xml;application/xhtml+xml;application/vnd.mozilla.xul+xml;text/mml;application/x-xpinstall;
+Categories=Application;Network;
